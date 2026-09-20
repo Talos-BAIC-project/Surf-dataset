@@ -69,38 +69,13 @@ def verify_release(*, reproduce=False):
     _check(bool(re.fullmatch(r"[0-9a-f]{40}", commit)), "invalid dataset commit")
     source_hashes = {s["path"]: s["sha256"] for s in manifest["source_files"]}
     blobs = {}
-    git_hits = 0
-    workdir_hits = 0
     for path, expected in source_hashes.items():
         _inside(REPO_ROOT / "sections", path.removeprefix("sections/"))
         result = subprocess.run(["git", "-C", str(REPO_ROOT), "show", f"{commit}:{path}"],
                                 capture_output=True)
-        if result.returncode == 0:
-            data = result.stdout
-            git_hits += 1
-        else:
-            data = _inside(REPO_ROOT, path).read_bytes()
-            workdir_hits += 1
+        data = result.stdout if result.returncode == 0 else _inside(REPO_ROOT, path).read_bytes()
         _check(_sha(data) == expected, f"source hash mismatch: {path}")
         blobs[path] = data
-    # #region agent log
-    try:
-        import time
-        _dbg = Path(__file__).resolve().parents[3] / "DP" / "debug-c5fe58.log"
-        _dbg.parent.mkdir(parents=True, exist_ok=True)
-        with _dbg.open("a", encoding="utf-8") as _fh:
-            _fh.write(json.dumps({
-                "sessionId": "c5fe58",
-                "runId": "verify1",
-                "hypothesisId": "E",
-                "location": "verify_release.py:verify_release",
-                "message": "source blob resolution",
-                "data": {"git_hits": git_hits, "workdir_hits": workdir_hits, "commit": commit},
-                "timestamp": int(time.time() * 1000),
-            }, ensure_ascii=False) + "\n")
-    except OSError:
-        pass
-    # #endregion
     datasets = []
     for spec in manifest["datasets"]:
         data = _inside(TOOL_ROOT, spec["path"]).read_bytes()
