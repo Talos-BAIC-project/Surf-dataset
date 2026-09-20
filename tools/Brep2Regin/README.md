@@ -48,3 +48,15 @@ python -m tools.Brep2Regin.verify_release --reproduce
 ```
 
 当前标签是从已有 Region 标注传播的 silver label，仍需工程师确认后才能升级为 gold。
+
+## 测试
+
+在仓库根目录：
+
+```powershell
+pip install -r tools/Brep2Regin/requirements.txt
+python -m pytest -q --disable-warnings tests/test_brep2regin.py tools/Brep2Regin/tests
+python -m tools.Brep2Regin.verify_release
+```
+
+预期 49 个测试通过，发布校验报告 54 个源文件、100 条 pilot、480 条全量。完整步骤见仓库根目录 [README.md](../../README.md)。
