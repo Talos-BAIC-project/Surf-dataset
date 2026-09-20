@@ -1,0 +1,171 @@
+schema_version: "1.0"
+id: b-shape-1
+type: cross_section
+
+# 形状定义
+shape:
+  primary: "B_shape"
+  aliases: ["凹字形", "3字形"]
+  topology: "closed"
+  n_chambers: 2
+  features:
+    - "单侧壁完整，另一侧中间内凹"
+    - "形成两个腔体（内凹侧连通）"
+    - "外轮廓角部有倒角过渡"
+    - "内凹角部有倒角过渡"
+  confidence: 0.9
+  source: "user_confirmed"
+  notes: "B字形截面，也叫凹字形。闭合截面，一侧完整，另一侧中间向内凹陷形成两个腔体。常用于前防撞梁，辊压工艺，钢制。"
+
+# 多车型变体（形状相同，尺寸不同）
+variants:
+  - vehicle: "B31"
+    bounding_box: {width: 28.6, height: 98.6}
+    fillet_radius: 4.3
+    wall_thickness: 4.3
+    source_file: "b-shape-1.py"
+    notes: "BAIC B31"
+  - vehicle: "C52X"
+    bounding_box: {width: 43.5, height: 108.5}
+    fillet_radius: 4.2
+    wall_thickness: 4.2
+    source_file: "B-shape-4.xml"
+    notes: "C52X车型"
+  - vehicle: "DONGFENG AX5"
+    bounding_box: {width: 47.0, height: 100.0}
+    source_file: "B-shape-5.xml"
+    notes: "DONGFENG AX5前防撞梁，钢制辊压"
+
+# 几何统计（用于分类，不锚定具体元素）
+geometry:
+  n_points: 16
+  n_curves: 16
+  n_outer_fillets: 4
+  n_inner_fillets: 2
+  n_notches: 1
+  n_ribs: 1
+  bounding_box:
+    width: 28.6
+    height: 98.6
+
+# 语义区域标注（全部用 Bounding Box，不锚定点/线）
+# 坐标系：以截面自身的 bounding box 为参考，原点在几何中心
+# x: 水平方向（宽），y: 垂直方向（高）
+# 注意：不使用"上/下/左/右"等方向词
+regions:
+  - name: "main_wall"
+    function: "structural"
+    bbox:
+      x: 24.3         # 相对于 bbox 左下角
+      y: 0.0
+      width: 4.3      # 壁厚
+      height: 94.3    # 壁高
+      position: "full_height_side"
+    notes: "主要承载壁，沿截面整个高度连续"
+
+  - name: "middle_rib"
+    function: "structural_shape"
+    bbox:
+      x: 4.3
+      y: 45.3         # 从基准算起
+      width: 24.3
+      height: 8.0
+      position: "middle"
+    notes: "截面轮廓的中间横边（辊压成型产生的形状特征），非额外加强筋"
+
+  - name: "chamber_1"
+    function: "enclosed"
+    bbox:
+      x: 4.3
+      y: 53.3
+      width: 24.3
+      height: 32.3
+      position: "end_a"
+    notes: "A端腔体"
+
+  - name: "chamber_2"
+    function: "enclosed"
+    bbox:
+      x: 4.3
+      y: 0.0
+      width: 24.3
+      height: 45.3
+      position: "end_b"
+    notes: "B端腔体"
+
+  - name: "notch"
+    function: "forming_feature"
+    bbox:
+      x: 0.0          # 开口侧
+      y: 45.3         # 从基准算起
+      depth: 24.3     # 凹槽深度（向内）
+      width: 25.0     # 凹槽宽度
+      position: "open_side_middle"
+    notes: "辊压成型的内凹特征"
+
+  - name: "fillet_outer"
+    function: "transition"
+    type: "fillet"
+    bbox:
+      radius: 4.3
+      position: "outer_corner"
+    notes: "外角倒角过渡（共4个角）"
+
+  - name: "fillet_inner"
+    function: "transition"
+    type: "fillet"
+    bbox:
+      radius: 4.3
+      position: "inner_corner"
+    notes: "内角倒角过渡（共2个角）"
+
+# 特征统计（用于分类器训练）
+feature_statistics:
+  outer_fillet_count: 4
+  inner_fillet_count: 2
+  notch_count: 1
+  rib_count: 1          # 中间横边（形状特征，非加强筋）
+  chamber_count: 2
+  open_side_count: 0  # 0 = 闭合
+
+# 应用场景
+applications:
+  - part: "front_bumper"
+    location: "front_end"
+    vehicle: "B31"
+    example: "B31 前防撞梁"
+    notes: "B字形截面用于前防撞梁，辊压成型。B31为BAIC紧凑型SUV。"
+  - part: "front_bumper"
+    location: "front_end"
+    vehicle: "C52X"
+    example: "C52X 前防撞梁"
+    notes: "B字形截面用于前防撞梁，辊压成型"
+  - part: "front_bumper"
+    location: "front_end"
+    vehicle: "DONGFENG AX5"
+    example: "DONGFENG AX5 前防撞梁"
+    notes: "B字形截面用于前防撞梁，钢制辊压"
+
+# 反向知识库
+reverse_knowledge:
+  - location: "front_end"
+    part: "front_bumper"
+    common_shapes: ["B_shape"]
+    confidence: "medium"
+    notes: "前保险杠可用B字形截面，辊压钢制"
+
+# 工艺与材料
+processes:
+  - roll_forming
+
+materials:
+  - steel
+
+# 元数据
+metadata:
+  version: "1.0"
+  date: "2026-07-27"
+  source: "DFC Macro"
+  status: "draft"
+  annotation_strategy: "bbox_only"
+  notes: "B字形截面实例草稿。标注策略：纯Bounding Box，不锚定点/线ID，不使用方向词。"

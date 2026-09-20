@@ -1,0 +1,135 @@
+geometry:
+  bbox:
+    x: 0.0
+    y: -83.412
+    width: 86.6
+    height: 87.504
+  coordinate_system: "YZ"
+  origin_note: "Section in YZ plane, X = -644.033 (global). Origin at SP_3 (0, 0) in section coords."
+
+shape:
+  primary: U_shape
+  aliases:
+    - U字形
+  topology: open
+  confidence: 0.9
+  source: user_confirmed
+  notes: U字形开放截面，基板与竖壁构成开放轮廓。来自 BAIC B31 吸能盒。
+
+regions:
+  - id: wall_left
+    function: structural
+    type: flat
+    bbox:
+      x: 0.0
+      y: 26.769
+      width: 4.3
+      height: 56.643
+    notes: "竖壁，连接基板"
+
+  - id: wall_right
+    function: structural
+    type: flat
+    bbox:
+      x: 82.292
+      y: 0.0
+      width: 4.308
+      height: 83.403
+    notes: "竖壁，连接基板"
+
+  - id: cavity
+    function: cavity
+    type: flat
+    bbox:
+      x: 0.0
+      y: 0.0
+      width: 86.6
+      height: 87.504
+    notes: "U型开放内腔"
+
+  - id: base
+    function: structural
+    type: flat
+    bbox:
+      x: 0.0
+      y: 83.403
+      width: 86.6
+      height: 4.101
+    notes: "基板"
+
+  - id: flange_left
+    function: connection
+    type: flange
+    bbox:
+      x: 0.0
+      y: 26.769
+      width: 4.3
+      height: 20.0
+    notes: "连接法兰"
+
+  - id: flange_right
+    function: connection
+    type: flange
+    bbox:
+      x: 82.292
+      y: 0.0
+      width: 4.308
+      height: 20.0
+    notes: "连接法兰"
+
+  - id: fillet_top_left
+    function: transition
+    type: fillet
+    bbox:
+      x: 0.0
+      y: 83.412
+      width: 4.3
+      height: 4.092
+    notes: "圆角过渡"
+
+  - id: fillet_top_right
+    function: transition
+    type: fillet
+    bbox:
+      x: 82.292
+      y: 83.403
+      width: 4.308
+      height: 4.091
+    notes: "圆角过渡"
+
+applications:
+  - vehicle: "BAIC B31"
+    part: "吸能盒"
+    position: "纵梁吸能区"
+    orientation: "横向布置"
+
+materials:
+  - name: "Steel"
+    standard: "Fe"
+    thickness_mm: 1.0
+    grade: "高强钢 (具体牌号待确认)"
+
+processes:
+  - "roll_forming"
+  - "stamping"
+
+metadata:
+  source_xml: "U-shape-1.xml"
+  section_name: "S_1"
+  point_count: 8
+  curve_count: 7
+  curve_types: "all_spline"
+  topology: "open"
+  creation_date: "2026-07-30"
+  notes: |
+    BAIC B31 吸能盒断面，U 型开口截面。
+    材料为钢 (Fe)，厚度 1mm，辊压或冲压成型。
+    截面位于 YZ 平面，X = -644.033。
+    8 个特征点 (SP_1~SP_8)，7 条样条曲线。
+    无闭合腔体，法兰连接件，基板含圆角过渡。
+
+variants:
+  - vehicle: "BAIC B31"
+    bounding_box: {width: 86.6, height: 57.9}
+    source_file: "U-shape-2.xml"
+    notes: "BAIC B31 吸能盒，U-shape-2 与 U-shape-1 焊接组成完整吸能盒。钢制辊压或冲压。"

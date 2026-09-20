@@ -1,0 +1,237 @@
+schema_version: "1.0"
+id: 一-shape-2
+type: cross_section
+
+shape:
+  primary: "一_shape_2edge"
+  aliases: ["一字形-2边", "L形", "V形", "折线", "扁条带圆角"]
+  topology: "open"
+  n_chambers: 0
+  features: 
+    - "开放型 2 条边折线截面家族"
+    - "Line 曲线数 = 2，可有 0~2 个 Fillet 修饰"
+    - "语义形态：像 L、像 V、像斜折线、像扁条带圆角"
+    - "由 2 条直线段连接形成（L 形、V 形、扁条等）"
+    - "无 wall、无 cavity、无 flange"
+  confidence: 0.9
+  source: "user_confirmed"
+  notes: "一-shape-2 是一-shape 族中 2 条边（Line 曲线数）的子类型。包含 L 形、V 形、斜折线、扁条带圆角等形态。"
+
+geometry:
+  n_points: 3
+  n_curves: 2
+  n_outer_fillets: 0
+  n_inner_fillets: 0
+  n_notches: 0
+  n_stiffeners: 0
+  n_chambers: 0
+  bounding_box:
+    width: 47.810
+    height: 7.550
+
+regions: []
+
+feature_statistics:
+  outer_fillet_count: 0
+  inner_fillet_count: 0
+  notch_count: 0
+  stiffener_count: 0
+  chamber_count: 0
+  cavity_count: 0
+  flange_count: 0
+  open_side_count: 2
+
+applications:
+  - part: "edge_bracket"
+    location: "various"
+    vehicle: "BAIC B31"
+    example: "边缘支架"
+    notes: "L 形折线用于边缘连接件"
+  - part: "welding_flange"
+    location: "various"
+    vehicle: "BAIC B31"
+    example: "焊接翻边"
+    notes: "两段线用于焊接翻边，两边拉伸"
+  - part: "corner_reinforcement"
+    location: "various"
+    vehicle: "BAIC B31"
+    example: "拐角加强件"
+    notes: "V 形折线用于拐角加强"
+
+reverse_knowledge:
+  - location: "various"
+    part: "reinforcement_plate"
+    common_shapes: ["一_shape"]
+    confidence: "medium"
+    notes: "局部加强板常用一字形截面"
+  - location: "various"
+    part: "welding_flange"
+    common_shapes: ["一_shape"]
+    confidence: "medium"
+    notes: "焊接翻边常用一字形截面"
+
+process:
+  - stamping
+
+materials:
+  - steel
+
+metadata:
+  version: "2.0"
+  date: "2026-08-18"
+  source: "DFC XML"
+  status: "draft"
+  annotation_strategy: "bbox_only"
+  notes: "一-shape-2 是一-shape 族中 2 条边（Line 曲线数）的子类型。共 30 个变种，由人工从候选中筛选确认。标注策略：纯 Bounding Box，不锚定点/线 ID。坐标从 DFC XML sCoord 数据计算。"
+
+variants:
+  - vehicle: "BAIC B31"
+    surface_group: "G_164"
+    bounding_box: {width: 14.95, height: 0.04}
+    source_file: "test-analysis-1.xml#S_1361"
+    notes: "由S_1360拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_189"
+    bounding_box: {width: 27.32, height: 5.2}
+    source_file: "test-analysis-1.xml#S_1565"
+    notes: "由S_1567拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_198"
+    bounding_box: {width: 18.15, height: 1.98}
+    source_file: "test-analysis-1.xml#S_1647"
+    notes: "由S_1646的两条边拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_198"
+    bounding_box: {width: 18.16, height: 1.92}
+    source_file: "test-analysis-1.xml#S_1648"
+    notes: "由S_1647拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_203"
+    bounding_box: {width: 26.83, height: 1.561}
+    source_file: "test-analysis-1.xml#S_1715"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_205"
+    bounding_box: {width: 18.5, height: 3.57}
+    source_file: "test-analysis-1.xml#S_1775"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_205"
+    bounding_box: {width: 19.62, height: 3.74}
+    source_file: "test-analysis-1.xml#S_1776"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_205"
+    bounding_box: {width: 10.41, height: 1.6}
+    source_file: "test-analysis-1.xml#S_1782"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_210"
+    bounding_box: {width: 31.16, height: 2.561}
+    source_file: "test-analysis-1.xml#S_1859"
+    notes: "由S_1858的两条边拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 76.86, height: 10.42}
+    source_file: "test-analysis-1.xml#S_1946"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 52.81, height: 4.75}
+    source_file: "test-analysis-1.xml#S_1947"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 35.39, height: 3.37}
+    source_file: "test-analysis-1.xml#S_1948"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 30.209, height: 2.915}
+    source_file: "test-analysis-1.xml#S_1949"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 28.17, height: 3.37}
+    source_file: "test-analysis-1.xml#S_1952"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 18.23, height: 0.37}
+    source_file: "test-analysis-1.xml#S_1953"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 18.18, height: 0.79}
+    source_file: "test-analysis-1.xml#S_1954"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 18.17, height: 0.97}
+    source_file: "test-analysis-1.xml#S_1955"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_213"
+    bounding_box: {width: 18.17, height: 1.0}
+    source_file: "test-analysis-1.xml#S_1956"
+    notes: "人工确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_27"
+    bounding_box: {width: 47.81, height: 7.55}
+    source_file: "test-analysis-1.xml#S_204"
+    notes: "已确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_27"
+    bounding_box: {width: 43.31, height: 19.68}
+    source_file: "test-analysis-1.xml#S_207"
+    notes: "已确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_36"
+    bounding_box: {width: 136.436, height: 3.69}
+    source_file: "test-analysis-1.xml#S_312"
+    notes: "用于焊接与S_313组成焊接翻边，由S_307的两条边拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_36"
+    bounding_box: {width: 120.406, height: 1.63}
+    source_file: "test-analysis-1.xml#S_313"
+    notes: "用于焊接与S_312组成焊接翻边，由S_312拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_38"
+    bounding_box: {width: 29.64, height: 4.61}
+    source_file: "test-analysis-1.xml#S_333"
+    notes: "用于焊接" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_7"
+    bounding_box: {width: 77.02, height: 5.3}
+    source_file: "test-analysis-1.xml#S_37"
+    notes: "已确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_67"
+    bounding_box: {width: 121.102, height: 0.003}
+    source_file: "test-analysis-1.xml#S_549"
+    notes: "由S_546的两条边拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_67"
+    bounding_box: {width: 121.102, height: 0.003}
+    source_file: "test-analysis-1.xml#S_550"
+    notes: "由S_549拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_11"
+    bounding_box: {width: 4.0, height: 47.0}
+    source_file: "test-analysis-1.xml#S_65"
+    notes: "已确认变种" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_79"
+    bounding_box: {width: 116.0, height: 1.0}
+    source_file: "test-analysis-1.xml#S_656"
+    notes: "由S_644拉伸得到" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_79"
+    bounding_box: {width: 108.48, height: 2.33}
+    source_file: "test-analysis-1.xml#S_657"
+    notes: "由S_558拉伸得到，组成焊接翻边" 
+  - vehicle: "BAIC B31"
+    surface_group: "G_89"
+    bounding_box: {width: 117.47, height: 0.0}
+    source_file: "test-analysis-1.xml#S_728"
+    notes: "用于焊接与S_727组成焊接翻边，由S_727的两条边拉伸得到" 

@@ -1,0 +1,48 @@
+schema_version: '1.0'
+id: kou-shape-3
+type: cross_section
+shape:
+  primary: kou_shape
+  aliases:
+  - 口字形
+  topology: closed
+geometry:
+  n_points: 4
+  n_curves: 4
+  n_outer_fillets: 0
+  bounding_box:
+    width: 42.0
+    height: 102.0
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 0.0
+    width: 42.0
+    height: 102.0
+  notes: 封闭型内腔
+feature_statistics:
+  chamber_count: 1
+  stiffener_count: 0
+  notch_count: 0
+  flange_count: 0
+  open_side_count: 0
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: unknown
+  example: unknown 前防撞梁
+  notes: 口字形截面，铝制挤压，车型未知。
+processes:
+- extrusion
+materials:
+- aluminum
+metadata:
+  version: '1.0'
+  date: '2026-07-29'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 口字形截面，铝制挤压，车型未知。

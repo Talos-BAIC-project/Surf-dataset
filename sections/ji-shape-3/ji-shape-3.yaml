@@ -1,0 +1,207 @@
+schema_version: "1.0"
+id: ji-shape-3
+type: cross_section
+
+shape:
+  primary: "ji_shape"
+  aliases: ["几字形", "帽形"]
+  topology: "open"
+  n_chambers: 0
+  features:
+    - "开放型截面，10 点 9 曲"
+    - "非对称结构：一侧垂直主壁 + 一侧多段折斜过渡壁"
+    - "非直角连接：各顶点偏转角不是 90°，而是 22°、56°、90° 等渐变角度"
+    - "与 ji-shape-1（6 点 5 曲 + 直角折弯）是不同家族"
+    - "有 cavity（开合空腔）"
+    - "有 2 个 flange（法兰），均位于开口端"
+    - "有 4 个倒角（chamfer），分布于各壁与法兰的过渡处"
+    - "crown（皇冠壁）为垂直主壁"
+  confidence: 0.9
+  source: "user_confirmed"
+  notes: "ji-shape-3 是独立的非对称几字形亚型。10 点 9 曲开放截面，与 ji-shape-1（6 点 5 曲直角折弯）和 ji-shape-2（14 点 13 曲）拓扑元数据不同。与 ji-shape-1 的关键区别：ji-shape-1 几乎都是 90° 直角连接，ji-shape-3 是非直角连接（折弯处为斜过渡）。"
+
+geometry:
+  n_points: 10
+  n_curves: 9
+  n_outer_fillets: 4
+  n_inner_fillets: 0
+  n_notches: 0
+  n_stiffeners: 0
+  bounding_box:
+    width: 100.231
+    height: 206.299
+
+# 坐标系：以截面自身的 bounding box 左下角为原点
+# x: 宽度方向，y: 高度方向
+# 坐标值从 DFC XML sCoord 计算得出
+# 截面平面：YZ 平面 (sX=0)
+# 转换公式：x = sY - sY_min, y = sZ - sZ_min
+regions:
+  - name: "crown"
+    function: "structural"
+    bbox:
+      x: 96.102
+      y: 47.499
+      width: 4.129
+      height: 86.946
+    notes: "皇冠壁，垂直主壁，位于封闭端"
+
+  - name: "wall_a"
+    function: "structural"
+    bbox:
+      x: 32.101
+      y: 8.138
+      width: 57.894
+      height: 23.897
+    notes: "斜壁A，主承载壁，从flange_a端延伸至crown端"
+
+  - name: "wall_b"
+    function: "structural"
+    bbox:
+      x: 20.932
+      y: 134.445
+      width: 37.585
+      height: 43.215
+    notes: "斜壁B，主承载壁，从crown端延伸至flange_b端"
+
+  - name: "cavity"
+    function: "cavity"
+    bbox:
+      x: 0.000
+      y: 6.684
+      width: 100.231
+      height: 181.981
+    notes: "开合空腔，与两法兰内端相接，覆盖整个开放空腔"
+
+  - name: "flange_a"
+    function: "connection"
+    bbox:
+      x: 0.000
+      y: 0.000
+      width: 20.571
+      height: 6.684
+    notes: "法兰A，开口端水平翻边，连接车身"
+
+  - name: "flange_b"
+    function: "connection"
+    bbox:
+      x: 51.865
+      y: 188.665
+      width: 1.543
+      height: 17.634
+    notes: "法兰B，开口端近垂直翻边，连接车身"
+
+  - name: "chamfer_1"
+    type: "fillet"
+    bbox:
+      x: 20.526
+      y: 1.601
+      radius: 5.811
+    notes: "倒角1，过渡flange_a与wall_a，圆心为倒角中点，半径覆盖整个段及两端点"
+
+  - name: "chamfer_2"
+    type: "fillet"
+    bbox:
+      x: 85.841
+      y: 30.495
+      radius: 9.272
+    notes: "倒角2，过渡wall_a与crown，圆心为倒角中点，半径覆盖整个段及两端点"
+
+  - name: "chamfer_3"
+    type: "fillet"
+    bbox:
+      x: 92.272
+      y: 123.030
+      radius: 5.894
+    notes: "倒角3，过渡crown与wall_b，圆心为倒角中点，半径覆盖整个段及两端点"
+
+  - name: "chamfer_4"
+    type: "fillet"
+    bbox:
+      x: 48.761
+      y: 176.732
+      radius: 6.430
+    notes: "倒角4，过渡wall_b与flange_b，圆心为倒角中点，半径覆盖整个段及两端点"
+
+feature_statistics:
+  outer_fillet_count: 4
+  inner_fillet_count: 0
+  notch_count: 0
+  stiffener_count: 0
+  chamber_count: 0
+  cavity_count: 1
+  flange_count: 2
+  open_side_count: 1
+
+applications:
+  - part: "apron_side_rail"
+    location: "front_structure"
+    vehicle: "BAIC B31"
+    example: "围裙边梁侧段"
+    notes: "BAIC B31 围裙边梁侧段，钢制冲压"
+  - part: "panel_cross_beam"
+    location: "front_structure"
+    vehicle: "BAIC B31"
+    example: "围板横梁"
+    notes: "BAIC B31 围板横梁，钢制冲压"
+
+reverse_knowledge:
+  - location: "front_structure"
+    part: "front_apron_side_rail"
+    common_shapes: ["ji_shape"]
+    confidence: "medium"
+    notes: "围裙边梁常用几字形截面"
+  - location: "front_structure"
+    part: "front_panel_cross_beam"
+    common_shapes: ["ji_shape"]
+    confidence: "medium"
+    notes: "围板横梁常用几字形截面"
+
+process:
+  - stamping
+
+materials:
+  - steel
+
+metadata:
+  version: "1.1"
+  date: "2026-08-07"
+  source: "DFC XML"
+  status: "draft"
+  annotation_strategy: "bbox_only"
+  notes: "非对称几字形截面实例。标注策略：纯Bounding Box，不锚定点/线ID。坐标从DFC XML sCoord数据计算。基准截面为 S_356（BAIC B31 围裙边梁侧段）。"
+
+variants:
+  # 已人工确认的 ji-shape-3 变种（10/9 非直角开放家族）
+  # 注：与 ji-shape-1（6/5 直角家族）和 ji-shape-2（14/13 家族）是不同家族
+  - vehicle: "BAIC B31"
+    surface_group: "G_41"
+    bounding_box: {width: 100.231, height: 206.299}
+    source_file: "E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_356"
+    notes: "围裙边梁侧段。基准截面（人工确认 ji-shape-3，10/9 非直角）。"
+  - vehicle: "BAIC B31"
+    surface_group: "G_40"
+    bounding_box: {width: 123.228, height: 140.208}
+    source_file: "E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_347"
+    notes: "围板横梁。人工确认 ji-shape-3 变种（10/9 非直角），宽高比不同。"
+  # 基于聚类+人工审核的 ji-shape-3 候选变种（同拓扑 10/9 开放 + 非直角连接）
+  - vehicle: "BAIC B31"
+    surface_group: "G_152"
+    bounding_box: {width: 92.2, height: 246.1}
+    source_file: "E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_983"
+    notes: "B 柱中加强板（同 ji-shape-3 同拓扑，可能属 ji-shape-3 或 ji-shape-1）。"
+  - vehicle: "BAIC B31"
+    surface_group: "G_154"
+    bounding_box: {width: 38.8, height: 158.9}
+    source_file: "E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1267"
+    notes: "B 柱中内板（同 ji-shape-3 同拓扑，可能属 ji-shape-3 或 ji-shape-1）。"
+  - vehicle: "BAIC B31"
+    surface_group: "G_155"
+    bounding_box: {width: 29.1, height: 152.6}
+    source_file: "E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1271"
+    notes: "B 柱内板末端位置段（同 ji-shape-3 同拓扑，可能属 ji-shape-3 或 ji-shape-1）。"
+  - vehicle: "BAIC B31"
+    surface_group: "G_156"
+    bounding_box: {width: 24.3, height: 152.6}
+    source_file: "E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1243"
+    notes: "B 柱加强板（同 ji-shape-3 同拓扑，可能属 ji-shape-3 或 ji-shape-1）。"

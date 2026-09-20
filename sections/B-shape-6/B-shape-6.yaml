@@ -1,0 +1,65 @@
+schema_version: '1.0'
+id: B-shape-6
+type: cross_section
+shape:
+  primary: B_shape
+  aliases:
+  - B字形
+  - 凹字形
+  topology: closed
+geometry:
+  n_points: 10
+  n_curves: 10
+  n_outer_fillets: 0
+  bounding_box:
+    width: 26.4
+    height: 100.5
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 50.0
+    width: 26.4
+    height: 50.5
+  notes: 腔体A
+- name: chamber_2
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 0.0
+    width: 26.4
+    height: 50.0
+  notes: 腔体B
+- name: notch_1
+  function: forming_feature
+  bbox:
+    x: 11.84
+    y: 21.32
+    depth: 14.54
+    width: 58.95
+  notes: 成型内凹特征
+feature_statistics:
+  chamber_count: 2
+  stiffener_count: 0
+  notch_count: 1
+  flange_count: 0
+  open_side_count: 0
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: unknown
+  example: 某车型前防撞梁
+  notes: 铝制挤压截面
+processes:
+- extrusion
+materials:
+- aluminum
+metadata:
+  version: '1.0'
+  date: '2026-07-30'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 铝制挤压截面，某车型前防撞梁

@@ -1,0 +1,52 @@
+schema_version: '1.0'
+id: B-shape-3
+type: cross_section
+shape:
+  primary: B_shape
+  aliases:
+  - B字形
+  topology: closed
+geometry:
+  n_points: 12
+  n_curves: 12
+  n_outer_fillets: 0
+  bounding_box:
+    width: 27.6
+    height: 99.7
+regions:
+  - name: "chamber_1"
+    function: "enclosed"
+    bbox: {x: 0.0, y: 58.4, width: 27.6, height: 41.3}
+    notes: "封闭型内腔A"
+  - name: "chamber_2"
+    function: "enclosed"
+    bbox: {x: 0.0, y: 0.0, width: 27.6, height: 41.3}
+    notes: "封闭型内腔B"
+  - name: "notch"
+    function: "forming_feature"
+    bbox: {x: 4.0, y: 41.3, depth: 23.6, width: 17.0}
+    notes: "成型内凹特征"
+feature_statistics:
+  outer_fillet_count: 0
+  stiffener_count: 0
+  chamber_count: 2
+  notch_count: 1
+  flange_count: 0
+  open_side_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: unknown
+  example: unknown 前防撞梁
+  notes: B字形截面用于前防撞梁，aluminum，extrusion
+processes:
+- extrusion
+materials:
+- aluminum
+metadata:
+  version: '1.0'
+  date: '2026-07-28'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: B字形截面。标注策略：纯Bounding Box，不锚定点/线ID，不使用方向词。坐标从DFC XML sCoord计算。来自unknown。

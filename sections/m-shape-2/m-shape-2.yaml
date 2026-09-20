@@ -1,0 +1,72 @@
+schema_version: '1.0'
+id: m-shape-2
+type: cross_section
+shape:
+  primary: m_shape
+  aliases:
+  - M字形
+  topology: open
+  features:
+  - 开放型截面，M字形轮廓
+  - 中间有凸起（notch），形成两个cavity
+  - 角部有倒角过渡
+  - 开放端有flange连接车身
+geometry:
+  n_points: 14
+  n_curves: 13
+  n_outer_fillets: 6
+  bounding_box:
+    width: 14.2
+    height: 88.5
+regions:
+  - name: "wall_c"
+    function: "structural"
+    bbox: {x: 3.0, y: 85.5, width: 11.2, height: 3.0}
+    notes: "水平壁A"
+  - name: "wall_d"
+    function: "structural"
+    bbox: {x: 3.0, y: 0.0, width: 11.2, height: 3.0}
+    notes: "水平壁B"
+  - name: "wall_a"
+    function: "structural"
+    bbox: {x: 0.0, y: 68.0, width: 3.0, height: 17.5}
+    notes: "垂直壁A"
+  - name: "wall_b"
+    function: "structural"
+    bbox: {x: 0.0, y: 3.0, width: 3.0, height: 17.5}
+    notes: "垂直壁B"
+  - name: "cavity_1"
+    function: "cavity"
+    bbox: {x: 0.0, y: 65.0, width: 14.2, height: 23.5}
+    notes: "开合空腔1，notch与壁A之间"
+  - name: "cavity_2"
+    function: "cavity"
+    bbox: {x: 0.0, y: 0.0, width: 14.2, height: 23.5}
+    notes: "开合空腔2，notch与壁B之间"
+  - name: "notch"
+    function: "forming_feature"
+    bbox: {x: 0.0, y: 23.5, depth: 8.0, width: 41.5}
+    notes: "中间凸起特征，从cavity壁面到notch深度壁面"
+feature_statistics:
+  outer_fillet_count: 6
+  notch_count: 1
+  cavity_count: 2
+  flange_count: 0
+  open_side_count: 1
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: C61X
+  example: C61X 前防撞梁
+  notes: M字形截面用于前防撞梁，钢制冲压
+processes:
+- stamping
+materials:
+- steel
+metadata:
+  version: '2.0'
+  date: '2026-07-29'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: "M字形截面。2个cavity+1个notch+2个flange。来自C61X。"

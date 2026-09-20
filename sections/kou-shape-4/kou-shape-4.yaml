@@ -1,0 +1,56 @@
+schema_version: '1.0'
+id: kou-shape-4
+type: cross_section
+shape:
+  primary: kou_shape
+  aliases:
+  - 口字形
+  topology: closed
+geometry:
+  n_points: 9
+  n_curves: 9
+  n_outer_fillets: 0
+  bounding_box:
+    width: 32.0
+    height: 80.5
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 16.5
+    width: 32.0
+    height: 64.0
+  notes: 封闭型内腔
+- name: flange_1
+  function: connection
+  bbox:
+    x: 0.0
+    y: 0.0
+    width: 3.0
+    height: 19.5
+  notes: 延伸壁
+feature_statistics:
+  chamber_count: 1
+  stiffener_count: 0
+  notch_count: 0
+  flange_count: 1
+  open_side_count: 0
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: BENZ
+  example: BENZ 前防撞梁
+  notes: 铝制挤压截面
+processes:
+- extrusion
+materials:
+- aluminum
+metadata:
+  version: '1.0'
+  date: '2026-07-30'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 铝制挤压截面，BENZ前防撞梁

@@ -1,0 +1,129 @@
+schema_version: "1.0"
+id: mu-shape-4
+type: cross_section
+
+shape:
+  primary: "目_shape"
+  aliases: ["目字形", "两条筋"]
+  topology: "closed"
+  n_chambers: 3
+  features:
+    - "闭合截面，矩形外轮廓，内部两条筋分隔成三格"
+    - "外轮廓角部有倒角过渡（R=3.0）"
+    - "筋有V形凸起特征（非平直筋）"
+    - "无法兰，无凹槽"
+  confidence: 0.9
+  source: "user_confirmed"
+  notes: "目字形截面，铝制挤压。来自X90KS（BAIC轿车），前防撞梁。筋有V形凸起。"
+
+geometry:
+  n_points: 18
+  n_curves: 22
+  n_outer_fillets: 4
+  n_inner_fillets: 0
+  n_notches: 0
+  n_stiffeners: 2
+  bounding_box:
+    width: 36.0
+    height: 156.0
+
+regions:
+  - name: "main_wall_a"
+    function: "structural"
+    bbox:
+      x: 0.0
+      y: 0.0
+      width: 3.0
+      height: 156.0
+    notes: "主壁A，沿截面整个高度连续"
+
+  - name: "main_wall_b"
+    function: "structural"
+    bbox:
+      x: 33.0
+      y: 0.0
+      width: 3.0
+      height: 156.0
+    notes: "主壁B，沿截面整个高度连续"
+
+  - name: "stiffener_a"
+    function: "stiffener"
+    bbox:
+      x: 0.0
+      y: 107.5
+      width: 36.0
+      height: 3.0
+    notes: "加强筋A，V形凸起特征，连接主壁A与主壁B"
+
+  - name: "stiffener_b"
+    function: "stiffener"
+    bbox:
+      x: 0.0
+      y: 45.6
+      width: 36.0
+      height: 3.0
+    notes: "加强筋B，V形凹陷特征，连接主壁A与主壁B"
+
+  - name: "chamber_1"
+    function: "enclosed"
+    bbox:
+      x: 3.0
+      y: 110.5
+      width: 30.0
+      height: 42.5
+    notes: "腔体1，筋A凸起与外轮廓之间"
+
+  - name: "chamber_2"
+    function: "enclosed"
+    bbox:
+      x: 3.0
+      y: 48.5
+      width: 30.0
+      height: 59.0
+    notes: "腔体2，筋A与筋B之间"
+
+  - name: "chamber_3"
+    function: "enclosed"
+    bbox:
+      x: 3.0
+      y: 3.0
+      width: 30.0
+      height: 42.6
+    notes: "腔体3，筋B凹陷与外轮廓之间"
+
+feature_statistics:
+  outer_fillet_count: 4
+  inner_fillet_count: 0
+  notch_count: 0
+  stiffener_count: 2
+  chamber_count: 3
+  flange_count: 0
+  open_side_count: 0
+
+applications:
+  - part: "front_bumper_beam"
+    location: "front_end"
+    vehicle: "X90KS"
+    example: "X90KS 前防撞梁"
+    notes: "目字形截面用于前防撞梁，铝制挤压，筋有V形凸起"
+
+reverse_knowledge:
+  - location: "front_end"
+    part: "front_bumper_beam"
+    common_shapes: ["目_shape"]
+    confidence: "high"
+    notes: "前防撞梁常用目字形截面（两条筋），铝制挤压"
+
+processes:
+  - extrusion
+
+materials:
+  - aluminum
+
+metadata:
+  version: "1.0"
+  date: "2026-07-28"
+  source: "DFC XML"
+  status: "draft"
+  annotation_strategy: "bbox_only"
+  notes: "目字形截面实例4。标注策略：纯Bounding Box，不锚定点/线ID，不使用方向词。坐标从DFC XML sCoord数据计算。来自X90KS（BAIC轿车）。筋有V形凸起特征。"

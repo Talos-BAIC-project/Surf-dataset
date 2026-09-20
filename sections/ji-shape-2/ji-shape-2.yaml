@@ -1,0 +1,91 @@
+schema_version: '1.0'
+id: ji-shape-2
+type: cross_section
+shape:
+  primary: ji_shape
+  aliases:
+  - 几字形
+  topology: open
+  features:
+  - 开放型截面，几字形轮廓
+  - 开放端有flange连接车身
+geometry:
+  n_points: 14
+  n_curves: 13
+  n_outer_fillets: 0
+  bounding_box:
+    width: 31.3
+    height: 163.4
+regions:
+- name: cavity
+  function: cavity
+  bbox:
+    x: 0.0
+    y: 33.3
+    width: 31.3
+    height: 96.7
+  notes: 开放型内腔，几字形凹陷空间
+- name: flange_a
+  function: connection
+  bbox:
+    x: 6.3
+    y: 162.9
+    width: 9.3
+    height: 0.5
+  notes: 法兰A，开放端水平壁
+- name: flange_b
+  function: connection
+  bbox:
+    x: 6.3
+    y: 0.0
+    width: 9.3
+    height: 0.5
+  notes: 法兰B，开放端水平壁
+feature_statistics:
+  outer_fillet_count: 0
+  flange_count: 2
+  open_side_count: 1
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: BAIC C70G
+  example: BAIC C70G 前防撞梁
+  notes: 几字形截面用于前防撞梁，钢制冲压
+processes:
+- stamping
+materials:
+- steel
+metadata:
+  version: '2.1'
+  date: '2026-07-30'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 几字形截面。2个flange。来自BAIC C70G。
+variants:
+- vehicle: Lynkco01
+  bounding_box:
+    width: 22.0
+    height: 132.5
+  source_file: ji-shape-3.xml
+  notes: 领克Lynkco01紧凑型SUV前防撞梁，钢制冲压
+- vehicle: BAIC X81
+  bounding_box:
+    width: 75.5
+    height: 186.8
+  source_file: test-section-3.xml
+  notes: BAIC X81纵梁部件A，钢制冲压。与test-section-4(部件B)的flange通过焊接或螺栓连接，共同组成X81纵梁
+- vehicle: BAIC B31
+  bounding_box:
+    width: 133.603
+    height: 105.944
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_741
+  notes: B31 车身尾纵梁断面，钢制冲压。ji-shape-2 变种（宽 134mm × 高 106mm，ji-shape-2 派生）
+- vehicle: BAIC B31
+  bounding_box:
+    width: 0
+    height: 0
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1813
+  notes: 加油口组件 (G_206, n_candidates=3)

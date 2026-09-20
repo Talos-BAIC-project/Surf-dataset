@@ -1,0 +1,232 @@
+schema_version: '1.0'
+id: ji-shape-1
+type: cross_section
+shape:
+  primary: ji_shape
+  aliases:
+  - 几字形
+  - 帽形
+  topology: open
+  n_chambers: 0
+  features:
+  - 开放型截面，几字形/帽形
+  - crown（皇冠壁）不要求水平，可为斜壁
+  - 有垂直壁（腿）延伸
+  - 有cavity（开合空腔）
+  - 有flange（法兰）连接车身
+  confidence: 0.9
+  source: user_confirmed
+  notes: 几字形截面，开放型结构。来自某轿车B柱下接头上端/左侧围外板板。还可能用于汽车前防撞梁，以及有些车型的门槛梁外板/前座椅横梁。
+geometry:
+  n_points: 6
+  n_curves: 5
+  n_outer_fillets: 0
+  n_inner_fillets: 0
+  n_notches: 0
+  n_stiffeners: 0
+  bounding_box:
+    width: 86.3
+    height: 258.2
+regions:
+- name: crown
+  function: structural
+  bbox:
+    x: 0.0
+    y: 191.6
+    width: 83.0
+    height: 6.9
+  notes: 皇冠壁，斜壁不要求水平，连接flange_a与wall_a
+- name: wall_a
+  function: structural
+  bbox:
+    x: 0.0
+    y: 40.8
+    width: 10.9
+    height: 150.8
+  notes: 斜壁A，从crown延伸至cavity
+- name: wall_b
+  function: structural
+  bbox:
+    x: 10.9
+    y: 29.5
+    width: 75.5
+    height: 11.3
+  notes: 斜壁B，连接cavity与flange_b
+- name: cavity
+  function: cavity
+  bbox:
+    x: 0.0
+    y: 29.5
+    width: 83.0
+    height: 169.0
+  notes: 开合空腔，从flange内端算起
+- name: flange_a
+  function: connection
+  bbox:
+    x: 83.0
+    y: 198.5
+    width: 0.3
+    height: 59.7
+  notes: 法兰A，垂直壁，连接车身
+- name: flange_b
+  function: connection
+  bbox:
+    x: 86.0
+    y: 0.0
+    width: 0.3
+    height: 29.5
+  notes: 法兰B，垂直壁，连接车身
+feature_statistics:
+  outer_fillet_count: 0
+  inner_fillet_count: 0
+  notch_count: 0
+  stiffener_count: 0
+  chamber_count: 0
+  cavity_count: 1
+  flange_count: 2
+  open_side_count: 1
+applications:
+- part: b_pillar_lower_joint
+  location: b_pillar
+  vehicle: unknown
+  example: B柱下接头上端/左侧围外板板
+  notes: 几字形截面用于B柱下接头上端/左侧围外板板
+- part: front_bumper_beam
+  location: front_end
+  vehicle: some_models
+  example: 汽车前防撞梁
+  notes: 部分车型的前防撞梁也使用几字形截面
+- part: sill_outer_panel
+  location: sill
+  vehicle: some_models
+  example: 门槛梁外板
+  notes: 部分车型的门槛梁外板使用几字形截面
+- part: front_seat_cross_beam
+  location: interior
+  vehicle: some_models
+  example: 前座椅横梁
+  notes: 部分车型的前座椅横梁使用几字形截面
+reverse_knowledge:
+- location: b_pillar
+  part: b_pillar_lower_joint
+  common_shapes:
+  - ji_shape
+  confidence: medium
+  notes: B柱下接头上端常用几字形截面
+- location: front_end
+  part: front_bumper_beam
+  common_shapes:
+  - ji_shape
+  confidence: low
+  notes: 部分车型前防撞梁使用几字形截面
+processes:
+- stamping
+materials:
+- steel
+metadata:
+  version: '1.3'
+  date: '2026-07-30'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 几字形截面实例。标注策略：纯Bounding Box，不锚定点/线ID，不使用方向词。坐标从DFC XML sCoord数据计算。crown不要求水平。开合空腔叫cavity（待专业工程师确认语义）。
+variants:
+- vehicle: unknown
+  bounding_box:
+    width: 53.5
+    height: 110.0
+  source_file: ji-shape-4.xml
+  notes: 某车型前防撞梁，钢制冲压
+- vehicle: BAIC B31
+  bounding_box:
+    width: 79.4
+    height: 203.7
+  source_file: test-section-1.xml
+  notes: BAIC B31纵梁，钢制冲压
+- vehicle: BAIC X81
+  bounding_box:
+    width: 49.9
+    height: 186.9
+  source_file: test-section-4.xml
+  notes: BAIC X81纵梁部件B，钢制冲压。与test-section-3(部件A)的flange通过焊接或螺栓连接，共同组成X81纵梁
+- vehicle: BAIC X81KS
+  bounding_box:
+    width: 170.9
+    height: 70.2
+  source_file: test-section-5.xml
+  notes: BAIC X81KS白车身中通道，钢制冲压。半车模型为几字形，整车为M字形
+- vehicle: unknown
+  bounding_box:
+    width: 73.523
+    height: 188.817
+  source_file: test-section-8.xml
+  notes: 某车型纵梁部件，钢制辊压
+- vehicle: unknown
+  bounding_box:
+    width: 63.42
+    height: 254.42
+  source_file: test-section-9.xml
+  notes: 某车型纵梁部件之一，钢制辊压，与test-section-10通过flange焊接组成完整纵梁
+- vehicle: unknown
+  bounding_box:
+    width: 75.891
+    height: 256.021
+  source_file: test-section-10.xml
+  wall_thickness: 1.0
+  notes: 某车型纵梁部件之一，钢制辊压，带凸起，与test-section-9通过flange焊接组成完整纵梁
+- vehicle: BAIC B31
+  bounding_box:
+    width: 170.0
+    height: 61.152
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_393
+  notes: B31 前座椅横梁断面，钢制冲压。ji-shape-1 变种（宽 170mm × 高 61mm，帽形派生）
+- vehicle: BAIC B31
+  bounding_box:
+    width: 63.56
+    height: 279.194
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_988
+  notes: B31 门槛梁左侧外板一段，钢制冲压。ji-shape-1 变种（宽 64mm × 高 279mm，窄高帽形）
+- vehicle: BAIC B31
+  bounding_box:
+    width: 154.38
+    height: 88.146
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_440
+  notes: B31 主纵梁尾段中内测部件（焊接在舱壁挡板），钢制冲压。ji-shape-1 变种（宽 154mm × 高 88mm）
+- vehicle: BAIC B31
+  bounding_box:
+    width: 97.174
+    height: 20.866
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_91
+  notes: B31 舱壁框架（连接翼子板区域），钢制冲压。ji-shape-1 变种（宽 97mm × 高 21mm，扁帽形）
+- vehicle: BAIC B31
+  bounding_box:
+    width: 0
+    height: 0
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1020
+  notes: 门槛外板Rocker Inner Panel板驾驶舱侧 (G_121, n_candidates=4)
+- vehicle: BAIC B31
+  bounding_box:
+    width: 0
+    height: 0
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1019
+  notes: 门槛外板Rocker Inner Panel板中部B柱侧=B柱内层板 (G_122, n_candidates=7)
+- vehicle: BAIC B31
+  bounding_box:
+    width: 0
+    height: 0
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1079
+  notes: A柱内板A-pillar lower Inner Panel段 (G_135, n_candidates=21)
+- vehicle: BAIC B31
+  bounding_box:
+    width: 0
+    height: 0
+  source_file: E:/Anchorpoint/testfile/Temporary/test data of sections shape/Shape
+    description/test/test-analysis/test-analysis-1/test-analysis-1.xml#S_1106
+  notes: A柱内外板A-pillar lower Inner Panel中段 (G_137, n_candidates=9)

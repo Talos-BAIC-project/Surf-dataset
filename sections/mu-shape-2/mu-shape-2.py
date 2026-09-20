@@ -1,0 +1,36 @@
+#
+#           DFC Script
+# =============================
+#   Description: Generated from DFCModel
+#          Date: 2026-07-28 19:49:52
+#       Version: 4.4.34
+#
+    S_3 = theModel.createSect( sectionName = "S_1");
+    S_3_SP_3 = theModel.createSecNode( x = 0.00, y = 0.00, z = 0.00, theSect = S_3);
+    S_3_SP_4 = theModel.createSecNode( x = -779.99, y = 0.00, z = 386.50, theSect = S_3);
+    S_3_SP_5 = theModel.createSecNode( x = -782.49, y = 0.00, z = 384.00, theSect = S_3);
+    S_3_SP_8 = theModel.createSecNode( x = -782.49, y = 0.00, z = 341.00, theSect = S_3);
+    S_3_SP_11 = theModel.createSecNode( x = -782.49, y = 0.00, z = 295.00, theSect = S_3);
+    S_3_SP_14 = theModel.createSecNode( x = -782.50, y = 0.00, z = 252.00, theSect = S_3);
+    S_3_SP_17 = theModel.createSecNode( x = -779.99, y = 0.00, z = 249.50, theSect = S_3);
+    S_3_SP_20 = theModel.createSecNode( x = -742.99, y = 0.00, z = 249.50, theSect = S_3);
+    S_3_SP_23 = theModel.createSecNode( x = -740.50, y = 0.00, z = 252.00, theSect = S_3);
+    S_3_SP_26 = theModel.createSecNode( x = -740.50, y = 0.00, z = 295.00, theSect = S_3);
+    S_3_SP_29 = theModel.createSecNode( x = -740.50, y = 0.00, z = 341.00, theSect = S_3);
+    S_3_SP_32 = theModel.createSecNode( x = -740.50, y = 0.00, z = 384.00, theSect = S_3);
+    S_3_SP_35 = theModel.createSecNode( x = -742.99, y = 0.00, z = 386.50, theSect = S_3);
+    S_3_SL_1 = theModel.createSecCurve( start = S_3_SP_4, end = S_3_SP_5, theSect = S_3);
+    S_3_SL_2 = theModel.createSecCurve( start = S_3_SP_5, end = S_3_SP_8, theSect = S_3);
+    S_3_SL_3 = theModel.createSecCurve( start = S_3_SP_8, end = S_3_SP_11, theSect = S_3);
+    S_3_SL_4 = theModel.createSecCurve( start = S_3_SP_11, end = S_3_SP_14, theSect = S_3);
+    S_3_SL_5 = theModel.createSecCurve( start = S_3_SP_14, end = S_3_SP_17, theSect = S_3);
+    S_3_SL_6 = theModel.createSecCurve( start = S_3_SP_17, end = S_3_SP_20, theSect = S_3);
+    S_3_SL_7 = theModel.createSecCurve( start = S_3_SP_20, end = S_3_SP_23, theSect = S_3);
+    S_3_SL_8 = theModel.createSecCurve( start = S_3_SP_23, end = S_3_SP_26, theSect = S_3);
+    S_3_SL_9 = theModel.createSecCurve( start = S_3_SP_26, end = S_3_SP_29, theSect = S_3);
+    S_3_SL_10 = theModel.createSecCurve( start = S_3_SP_29, end = S_3_SP_32, theSect = S_3);
+    S_3_SL_11 = theModel.createSecCurve( start = S_3_SP_32, end = S_3_SP_35, theSect = S_3);
+    S_3_SL_12 = theModel.createSecCurve( start = S_3_SP_35, end = S_3_SP_4, theSect = S_3);
+    S_3_SL_13 = theModel.createSecCurve( start = S_3_SP_8, end = S_3_SP_29, theSect = S_3);
+    S_3_SL_14 = theModel.createSecCurve( start = S_3_SP_26, end = S_3_SP_11, theSect = S_3);
+    theModel.drawModel();

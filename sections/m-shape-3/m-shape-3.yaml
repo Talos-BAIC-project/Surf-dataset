@@ -1,0 +1,80 @@
+schema_version: '1.0'
+id: m-shape-3
+type: cross_section
+shape:
+  primary: m_shape
+  aliases:
+  - M字形
+  topology: open
+geometry:
+  n_points: 17
+  n_curves: 16
+  n_outer_fillets: 0
+  bounding_box:
+    width: 35.0
+    height: 129.0
+regions:
+- name: cavity_1
+  function: cavity
+  bbox:
+    x: 0.0
+    y: 80.0
+    width: 35.0
+    height: 33.7
+  notes: 开放型内腔A，notch与壁A之间
+- name: cavity_2
+  function: cavity
+  bbox:
+    x: 0.0
+    y: 16.1
+    width: 35.0
+    height: 40.1
+  notes: 开放型内腔B，notch与壁B之间
+- name: notch
+  function: forming_feature
+  bbox:
+    x: 25.0
+    y: 40.8
+    depth: 10.0
+    width: 54.6
+  notes: 中间V形凸起特征
+- name: flange_a
+  function: connection
+  bbox:
+    x: 0.0
+    y: 118.7
+    width: 5.0
+    height: 10.3
+  notes: 法兰A，开放端垂直壁
+- name: flange_b
+  function: connection
+  bbox:
+    x: 0.0
+    y: 0.0
+    width: 5.0
+    height: 11.2
+  notes: 法兰B，开放端垂直壁
+feature_statistics:
+  chamber_count: 0
+  stiffener_count: 0
+  notch_count: 1
+  flange_count: 2
+  open_side_count: 1
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: borgward BX6
+  example: Borgward BX6 前防撞梁
+  notes: M字形截面，辊压成型，钢制，来自Borgward BX6。
+processes:
+- roll_forming
+materials:
+- steel
+metadata:
+  version: '1.0'
+  date: '2026-07-29'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: M字形截面，辊压成型，钢制，来自Borgward BX6。

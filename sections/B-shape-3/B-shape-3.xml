@@ -1,0 +1,1670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoConcept>
+  <Version>Wranger 4.4.34.24527</Version>
+  <MajorNumber>4</MajorNumber>
+  <MinorNumber>4</MinorNumber>
+  <RevisionNumber>34</RevisionNumber>
+  <BuildNumber>20260616</BuildNumber>
+  <COLOR_SWITCH_INDEX>0</COLOR_SWITCH_INDEX>
+  <MODEL_STATE>0</MODEL_STATE>
+  <SurfaceGroups />
+  <Sections>
+    <Section>
+      <ID>3</ID>
+      <Name>S_1</Name>
+      <Type>1</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <CoordSysID>3</CoordSysID>
+      <feaType>0</feaType>
+      <featureID>-1</featureID>
+      <RP_gCoord>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </RP_gCoord>
+      <RP_sCoord>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </RP_sCoord>
+      <Nodes>
+        <id>3</id>
+        <id>4</id>
+        <id>5</id>
+        <id>8</id>
+        <id>11</id>
+        <id>14</id>
+        <id>17</id>
+        <id>20</id>
+        <id>23</id>
+        <id>26</id>
+        <id>29</id>
+        <id>32</id>
+        <id>35</id>
+      </Nodes>
+      <NodeNames>
+        <name>S_1</name>
+        <name>S_1_SP_1</name>
+        <name>S_1_SP_2</name>
+        <name>S_1_SP_3</name>
+        <name>S_1_SP_4</name>
+        <name>S_1_SP_5</name>
+        <name>S_1_SP_6</name>
+        <name>S_1_SP_7</name>
+        <name>S_1_SP_8</name>
+        <name>S_1_SP_9</name>
+        <name>S_1_SP_10</name>
+        <name>S_1_SP_11</name>
+        <name>S_1_SP_12</name>
+      </NodeNames>
+      <Curves>
+        <id>1</id>
+        <id>2</id>
+        <id>3</id>
+        <id>4</id>
+        <id>5</id>
+        <id>6</id>
+        <id>7</id>
+        <id>8</id>
+        <id>9</id>
+        <id>10</id>
+        <id>11</id>
+        <id>12</id>
+      </Curves>
+      <CurveNames>
+        <name>S_1_SL_1</name>
+        <name>S_1_SL_2</name>
+        <name>S_1_SL_3</name>
+        <name>S_1_SL_4</name>
+        <name>S_1_SL_5</name>
+        <name>S_1_SL_6</name>
+        <name>S_1_SL_7</name>
+        <name>S_1_SL_8</name>
+        <name>S_1_SL_9</name>
+        <name>S_1_SL_10</name>
+        <name>S_1_SL_11</name>
+        <name>S_1_SL_12</name>
+      </CurveNames>
+      <SurfaceGroups />
+      <ModelGroupName />
+    </Section>
+  </Sections>
+  <CoordSystems>
+    <CoordSystem>
+      <ID>3</ID>
+      <Name>S_1</Name>
+      <Type>1</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <origin>
+        <X>1E-20</X>
+        <Y>1E-20</Y>
+        <Z>1E-20</Z>
+      </origin>
+      <xAxis>
+        <X>-0.999999999999999</X>
+        <Y>5.35897931700472E-08</Y>
+        <Z>1E-20</Z>
+      </xAxis>
+      <yAxis>
+        <X>-5.35897931700672E-08</X>
+        <Y>-0.999999999999999</Y>
+        <Z>1E-20</Z>
+      </yAxis>
+      <zAxis>
+        <X>1E-20</X>
+        <Y>1E-20</Y>
+        <Z>1</Z>
+      </zAxis>
+      <translate>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </translate>
+      <revolve>
+        <X>-1E-20</X>
+        <Y>1E-20</Y>
+        <Z>3.1415926</Z>
+      </revolve>
+      <mirror>
+        <XY>False</XY>
+        <YZ>False</YZ>
+        <ZX>False</ZX>
+      </mirror>
+      <zoom>
+        <X>1</X>
+        <Y>5</Y>
+        <Z>5</Z>
+      </zoom>
+      <xTrans>0</xTrans>
+      <yTrans>0</yTrans>
+      <zTrans>0</zTrans>
+      <x_rol>-1E-20</x_rol>
+      <y_rol>1E-20</y_rol>
+      <z_rol>3.1415926</z_rol>
+      <xy_mirror>False</xy_mirror>
+      <yz_mirror>False</yz_mirror>
+      <zx_mirror>False</zx_mirror>
+      <xZoom>1</xZoom>
+      <yZoom>5</yZoom>
+      <zZoom>5</zZoom>
+    </CoordSystem>
+  </CoordSystems>
+  <CoordSysAs />
+  <Points>
+    <Point>
+      <ID>3</ID>
+      <Name>S_1</Name>
+      <Type>3</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>0.000</item>
+        <item>0.000</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>0.000</item>
+        <item>0.000</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves />
+    </Point>
+    <Point>
+      <ID>4</ID>
+      <Name>S_1_SP_1</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>1.000</item>
+        <item>45.984</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-1.000</item>
+        <item>45.984</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_1</name>
+        <name>S_1_SL_12</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>5</ID>
+      <Name>S_1_SP_2</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>6.035</item>
+        <item>49.848</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-6.035</item>
+        <item>49.848</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_1</name>
+        <name>S_1_SL_2</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>8</ID>
+      <Name>S_1_SP_3</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>28.169</item>
+        <item>34.669</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-28.169</item>
+        <item>34.669</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_2</name>
+        <name>S_1_SL_3</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>11</ID>
+      <Name>S_1_SP_4</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>28.583</item>
+        <item>25.165</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-28.583</item>
+        <item>25.165</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_3</name>
+        <name>S_1_SL_4</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>14</ID>
+      <Name>S_1_SP_5</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>8.948</item>
+        <item>8.513</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-8.948</item>
+        <item>8.513</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_4</name>
+        <name>S_1_SL_5</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>17</ID>
+      <Name>S_1_SP_6</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>5.000</item>
+        <item>2.875</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-5.000</item>
+        <item>2.875</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_5</name>
+        <name>S_1_SL_6</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>20</ID>
+      <Name>S_1_SP_7</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>5.000</item>
+        <item>-2.875</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-5.000</item>
+        <item>-2.875</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_6</name>
+        <name>S_1_SL_7</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>23</ID>
+      <Name>S_1_SP_8</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>8.948</item>
+        <item>-8.513</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-8.948</item>
+        <item>-8.513</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_7</name>
+        <name>S_1_SL_8</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>26</ID>
+      <Name>S_1_SP_9</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>28.584</item>
+        <item>-25.165</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-28.584</item>
+        <item>-25.165</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_8</name>
+        <name>S_1_SL_9</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>29</ID>
+      <Name>S_1_SP_10</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>28.168</item>
+        <item>-34.670</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-28.168</item>
+        <item>-34.670</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_9</name>
+        <name>S_1_SL_10</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>32</ID>
+      <Name>S_1_SP_11</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>6.035</item>
+        <item>-49.848</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-6.035</item>
+        <item>-49.848</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_10</name>
+        <name>S_1_SL_11</name>
+      </connectCurves>
+    </Point>
+    <Point>
+      <ID>35</ID>
+      <Name>S_1_SP_12</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <gCoord>
+        <item>0.000</item>
+        <item>1.000</item>
+        <item>-45.984</item>
+      </gCoord>
+      <sCoord>
+        <item>0.000</item>
+        <item>-1.000</item>
+        <item>-45.984</item>
+      </sCoord>
+      <ContinueName />
+      <AssociationName />
+      <continueSL>False</continueSL>
+      <SLContinueType>0</SLContinueType>
+      <continueLL>False</continueLL>
+      <LLContinueType>0</LLContinueType>
+      <continueUL>False</continueUL>
+      <ULContinueType>0</ULContinueType>
+      <continueBL>False</continueBL>
+      <BLContinueType>0</BLContinueType>
+      <usedFEM>False</usedFEM>
+      <sectionName>S_1</sectionName>
+      <IndexNodeName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <MasterPointName />
+      <SlavePointName />
+      <MasterCurveName />
+      <MasterSurfaceName />
+      <ConnectionName />
+      <RigidConnectionName />
+      <BoltName />
+      <connectCurves>
+        <name>S_1_SL_11</name>
+        <name>S_1_SL_12</name>
+      </connectCurves>
+    </Point>
+  </Points>
+  <Curves>
+    <Curve>
+      <ID>1</ID>
+      <Name>S_1_SL_1</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>4</startPointID>
+      <startPointName>S_1_SP_1</startPointName>
+      <endPointID>5</endPointID>
+      <endPointName>S_1_SP_2</endPointName>
+      <controlPoint_1_ID>6</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>2.6783</Y>
+        <Z>47.2718</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-2.6783</Y>
+        <Z>47.2718</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>7</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>4.3568</Y>
+        <Z>48.5598</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-4.3568</Y>
+        <Z>48.5598</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>5.35793857117687E-08</value>
+        <value>0.999805794011082</value>
+        <value>45.98388</value>
+        <value>3.23431711285069E-07</value>
+        <value>6.035323</value>
+        <value>49.84776</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>2</ID>
+      <Name>S_1_SL_2</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>5</startPointID>
+      <startPointName>S_1_SP_2</startPointName>
+      <endPointID>8</endPointID>
+      <endPointName>S_1_SP_3</endPointName>
+      <controlPoint_1_ID>9</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>13.4131</Y>
+        <Z>44.7882</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-13.4131</Y>
+        <Z>44.7882</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>10</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>20.7908</Y>
+        <Z>39.7287</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-20.7908</Y>
+        <Z>39.7287</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>3.23431711285069E-07</value>
+        <value>6.035323</value>
+        <value>49.84776</value>
+        <value>1.50954728208456E-06</value>
+        <value>28.1685595854726</value>
+        <value>34.6692116581094</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>3</ID>
+      <Name>S_1_SL_3</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>8</startPointID>
+      <startPointName>S_1_SP_3</startPointName>
+      <endPointID>11</endPointID>
+      <endPointName>S_1_SP_4</endPointName>
+      <controlPoint_1_ID>12</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>28.3069</Y>
+        <Z>31.5012</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-28.3069</Y>
+        <Z>31.5012</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>13</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>28.4451</Y>
+        <Z>28.3331</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-28.4451</Y>
+        <Z>28.3331</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>1.50954728208456E-06</value>
+        <value>28.1685595854726</value>
+        <value>34.6692116581094</value>
+        <value>1.53178061525641E-06</value>
+        <value>28.5834395813961</value>
+        <value>25.1650395813961</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>4</ID>
+      <Name>S_1_SL_4</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>11</startPointID>
+      <startPointName>S_1_SP_4</startPointName>
+      <endPointID>14</endPointID>
+      <endPointName>S_1_SP_5</endPointName>
+      <controlPoint_1_ID>15</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>22.0383</Y>
+        <Z>19.6142</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-22.0383</Y>
+        <Z>19.6142</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>16</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>15.4931</Y>
+        <Z>14.0635</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-15.4931</Y>
+        <Z>14.0635</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>1.53178061525641E-06</value>
+        <value>28.5834395813961</value>
+        <value>25.1650395813961</value>
+        <value>4.79514984920894E-07</value>
+        <value>8.947879</value>
+        <value>8.512666</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>5</ID>
+      <Name>S_1_SL_5</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>14</startPointID>
+      <startPointName>S_1_SP_5</startPointName>
+      <endPointID>17</endPointID>
+      <endPointName>S_1_SP_6</endPointName>
+      <controlPoint_1_ID>18</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>7.6319</Y>
+        <Z>6.6333</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-7.6319</Y>
+        <Z>6.6333</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>19</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>6.3160</Y>
+        <Z>4.7539</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-6.3160</Y>
+        <Z>4.7539</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>4.79514984920894E-07</value>
+        <value>8.947879</value>
+        <value>8.512666</value>
+        <value>2.67949126619765E-07</value>
+        <value>5.000003</value>
+        <value>2.87451</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>6</ID>
+      <Name>S_1_SL_6</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>17</startPointID>
+      <startPointName>S_1_SP_6</startPointName>
+      <endPointID>20</endPointID>
+      <endPointName>S_1_SP_7</endPointName>
+      <controlPoint_1_ID>21</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>5.0000</Y>
+        <Z>0.9582</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-5.0000</Y>
+        <Z>0.9582</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>22</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>5.0000</Y>
+        <Z>-0.9582</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-5.0000</Y>
+        <Z>-0.9582</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>2.67949126619765E-07</value>
+        <value>5.000003</value>
+        <value>2.87451</value>
+        <value>2.67948965850328E-07</value>
+        <value>5</value>
+        <value>-2.87451</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>7</ID>
+      <Name>S_1_SL_7</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>20</startPointID>
+      <startPointName>S_1_SP_7</startPointName>
+      <endPointID>23</endPointID>
+      <endPointName>S_1_SP_8</endPointName>
+      <controlPoint_1_ID>24</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>6.3160</Y>
+        <Z>-4.7539</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-6.3160</Y>
+        <Z>-4.7539</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>25</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>7.6319</Y>
+        <Z>-6.6333</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-7.6319</Y>
+        <Z>-6.6333</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>2.67948965850328E-07</value>
+        <value>5</value>
+        <value>-2.87451</value>
+        <value>4.79515038510517E-07</value>
+        <value>8.94787999999999</value>
+        <value>-8.51266</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>8</ID>
+      <Name>S_1_SL_8</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>23</startPointID>
+      <startPointName>S_1_SP_8</startPointName>
+      <endPointID>26</endPointID>
+      <endPointName>S_1_SP_9</endPointName>
+      <controlPoint_1_ID>27</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>15.4931</Y>
+        <Z>-14.0636</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-15.4931</Y>
+        <Z>-14.0636</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>28</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>22.0383</Y>
+        <Z>-19.6145</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-22.0383</Y>
+        <Z>-19.6145</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>4.79515038510517E-07</value>
+        <value>8.94787999999999</value>
+        <value>-8.51266</value>
+        <value>1.5317849024266E-06</value>
+        <value>28.583519581158</value>
+        <value>-25.1654</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>9</ID>
+      <Name>S_1_SL_9</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>26</startPointID>
+      <startPointName>S_1_SP_9</startPointName>
+      <endPointID>29</endPointID>
+      <endPointName>S_1_SP_10</endPointName>
+      <controlPoint_1_ID>30</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>28.4452</Y>
+        <Z>-28.3335</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-28.4452</Y>
+        <Z>-28.3335</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>31</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>28.3068</Y>
+        <Z>-31.5015</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-28.3068</Y>
+        <Z>-31.5015</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>1.5317849024266E-06</value>
+        <value>28.583519581158</value>
+        <value>-25.1654</value>
+        <value>1.50954138720101E-06</value>
+        <value>28.1684495853679</value>
+        <value>-34.6696</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>10</ID>
+      <Name>S_1_SL_10</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>29</startPointID>
+      <startPointName>S_1_SP_10</startPointName>
+      <endPointID>32</endPointID>
+      <endPointName>S_1_SP_11</endPointName>
+      <controlPoint_1_ID>33</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>20.7907</Y>
+        <Z>-39.7289</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-20.7907</Y>
+        <Z>-39.7289</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>34</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>13.4130</Y>
+        <Z>-44.7883</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-13.4130</Y>
+        <Z>-44.7883</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>1.50954138720101E-06</value>
+        <value>28.1684495853679</value>
+        <value>-34.6696</value>
+        <value>3.23429192563793E-07</value>
+        <value>6.035276</value>
+        <value>-49.8476</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>11</ID>
+      <Name>S_1_SL_11</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>32</startPointID>
+      <startPointName>S_1_SP_11</startPointName>
+      <endPointID>35</endPointID>
+      <endPointName>S_1_SP_12</endPointName>
+      <controlPoint_1_ID>36</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>4.3568</Y>
+        <Z>-48.5597</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-4.3568</Y>
+        <Z>-48.5597</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>37</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>2.6783</Y>
+        <Z>-47.2718</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-2.6783</Y>
+        <Z>-47.2718</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>3.23429192563793E-07</value>
+        <value>6.035276</value>
+        <value>-49.8476</value>
+        <value>5.35793857109394E-08</value>
+        <value>0.99980579401277</value>
+        <value>-45.9839</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+    <Curve>
+      <ID>12</ID>
+      <Name>S_1_SL_12</Name>
+      <Type>2</Type>
+      <INITIAL_STATE>8</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <sectionID>3</sectionID>
+      <sectionName>S_1</sectionName>
+      <surfacegroupName>
+      </surfacegroupName>
+      <AssociationName />
+      <isInMasterConnectionNode>False</isInMasterConnectionNode>
+      <startPointID>35</startPointID>
+      <startPointName>S_1_SP_12</startPointName>
+      <endPointID>4</endPointID>
+      <endPointName>S_1_SP_1</endPointName>
+      <controlPoint_1_ID>38</controlPoint_1_ID>
+      <controlPoint_1_gCoord>
+        <X>0.0000</X>
+        <Y>0.9998</Y>
+        <Z>-15.3280</Z>
+      </controlPoint_1_gCoord>
+      <controlPoint_1_sCoord>
+        <X>0.0000</X>
+        <Y>-0.9998</Y>
+        <Z>-15.3280</Z>
+      </controlPoint_1_sCoord>
+      <controlPoint_2_ID>39</controlPoint_2_ID>
+      <controlPoint_2_gCoord>
+        <X>0.0000</X>
+        <Y>0.9998</Y>
+        <Z>15.3280</Z>
+      </controlPoint_2_gCoord>
+      <controlPoint_2_sCoord>
+        <X>0.0000</X>
+        <Y>-0.9998</Y>
+        <Z>15.3280</Z>
+      </controlPoint_2_sCoord>
+      <dataLen>6</dataLen>
+      <data>
+        <value>5.35793857109394E-08</value>
+        <value>0.99980579401277</value>
+        <value>-45.9839</value>
+        <value>5.35793857117687E-08</value>
+        <value>0.999805794011082</value>
+        <value>45.98388</value>
+      </data>
+      <FeatureName />
+      <JointNodeName />
+      <ConnectionName />
+      <ModelGroupName />
+      <MoveStepName />
+      <SetDefintionName />
+      <CollisionName />
+      <slavePointNames />
+      <slaveCurveNames />
+      <masterCurveNames />
+      <masterSurfaceNames />
+      <BoltName />
+      <RigidConnectionName />
+      <AssociateCurveObjName />
+    </Curve>
+  </Curves>
+  <Surfaces />
+  <WeldDefinations />
+  <WeldSpotTypes />
+  <CurveContinue />
+  <Materials>
+    <Material>
+      <ID>1</ID>
+      <Name>Fe</Name>
+      <Type>1</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <E>210000</E>
+      <G>NaN</G>
+      <PoissonRatio>0.3</PoissonRatio>
+      <density>7.85E-09</density>
+      <A>0</A>
+      <GE>NaN</GE>
+      <TREF>NaN</TREF>
+      <ST>NaN</ST>
+      <SC>NaN</SC>
+      <SS>NaN</SS>
+      <colour>118.119.120</colour>
+      <userID>1</userID>
+      <description>Fe</description>
+    </Material>
+    <Material>
+      <ID>2</ID>
+      <Name>Al</Name>
+      <Type>1</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <E>72000</E>
+      <G>NaN</G>
+      <PoissonRatio>0.22</PoissonRatio>
+      <density>2.7E-09</density>
+      <A>0</A>
+      <GE>NaN</GE>
+      <TREF>NaN</TREF>
+      <ST>NaN</ST>
+      <SC>NaN</SC>
+      <SS>NaN</SS>
+      <colour>220.223.227</colour>
+      <userID>2</userID>
+      <description>Al</description>
+    </Material>
+  </Materials>
+  <Composites />
+  <plys />
+  <laminates />
+  <Properties>
+    <Property>
+      <ID>1</ID>
+      <Name>PID_1</Name>
+      <Type>1</Type>
+      <INITIAL_STATE>0</INITIAL_STATE>
+      <visible>True</visible>
+      <hasError>False</hasError>
+      <subEntries />
+      <superEntries />
+      <userID>1</userID>
+      <thickness>1</thickness>
+      <colour>255.245.225</colour>
+      <materialNo>1</materialNo>
+      <description>Prop_1</description>
+      <draftBaseCoord>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+      </draftBaseCoord>
+      <draftDir>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+      </draftDir>
+      <sectionID>-1</sectionID>
+      <draftAngle>0</draftAngle>
+      <draftSide>0</draftSide>
+      <materialName>Fe</materialName>
+      <assoSurfs />
+    </Property>
+  </Properties>
+  <IDSections />
+  <SetDefintions />
+  <IndexNodes />
+  <ModelGroups />
+  <Connections />
+  <RigidConnects />
+  <Bolts />
+  <Collisions />
+  <Associations />
+  <MeshTypes />
+  <Features />
+  <JointNodes />
+  <MoveSteps />
+  <Components />
+  <SpotRecords />
+  <AssociateCurves />
+  <MeshProcesses />
+</AutoConcept>

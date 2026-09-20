@@ -1,0 +1,175 @@
+schema_version: "1.0"
+id: mu-shape-1
+type: cross_section
+
+shape:
+  primary: "目_shape"
+  aliases: ["目字形", "两条筋"]
+  topology: "closed"
+  n_chambers: 3
+  features:
+    - "矩形外轮廓，内部两条水平筋分隔成三格"
+    - "法兰侧有上下两个法兰面（翻边）"
+    - "中间腔体有凹槽（内部壁分隔产生）"
+    - "角部有倒角过渡"
+  confidence: 0.9
+  source: "user_confirmed"
+  notes: "目字形截面，内部有两条水平筋分隔成三格。也叫'两条筋'。常用于前防撞梁，挤压工艺，铝制。"
+
+geometry:
+  n_points: 16
+  n_curves: 18
+  n_outer_fillets: 2
+  n_inner_fillets: 4
+  n_notches: 1
+  n_stiffeners: 2
+  bounding_box:
+    width: 39.0
+    height: 105.0
+
+# 坐标系：以截面自身的 bounding box 左下角为原点
+# x: 宽度方向（向右），y: 高度方向（向上）
+# 坐标值从 DFC 脚本实际几何数据计算得出
+regions:
+  - name: "main_wall_a"
+    function: "structural"
+    bbox:
+      x: 0.0
+      y: 0.0
+      width: 1.5
+      height: 105.0
+    notes: "法兰侧主壁，沿截面整个高度连续"
+
+  - name: "main_wall_b"
+    function: "structural"
+    bbox:
+      x: 37.5
+      y: 6.5
+      width: 1.5
+      height: 82.0
+    notes: "对侧主壁，从壁A到壁B"
+
+  - name: "stiffener_a"
+    function: "stiffener"
+    bbox:
+      x: 6.0
+      y: 63.2
+      width: 33.0
+      height: 1.5
+    notes: "内部A筋（靠近A端），水平加强筋"
+
+  - name: "stiffener_b"
+    function: "stiffener"
+    bbox:
+      x: 6.0
+      y: 31.8
+      width: 33.0
+      height: 1.5
+    notes: "内部B筋（靠近B端），水平加强筋"
+
+  - name: "chamber_1"
+    function: "enclosed"
+    bbox:
+      x: 1.5
+      y: 63.2
+      width: 36.0
+      height: 25.3
+    notes: "A端腔体"
+
+  - name: "chamber_2"
+    function: "enclosed"
+    bbox:
+      x: 6.0
+      y: 31.8
+      width: 31.5
+      height: 31.4
+    notes: "中间腔体（去除notch的部分）"
+
+  - name: "chamber_3"
+    function: "enclosed"
+    bbox:
+      x: 1.5
+      y: 6.5
+      width: 36.0
+      height: 25.3
+    notes: "B端腔体"
+
+  - name: "flange_a"
+    function: "connection"
+    bbox:
+      x: 0.0
+      y: 88.5
+      width: 1.5
+      height: 16.5
+    notes: "A端法兰面（翻边），连接车身"
+
+  - name: "flange_b"
+    function: "connection"
+    bbox:
+      x: 0.0
+      y: 0.0
+      width: 1.5
+      height: 6.5
+    notes: "B端法兰面（翻边）"
+
+  - name: "notch"
+    function: "forming_feature"
+    bbox:
+      x: 0.0
+      y: 28.1
+      depth: 6.0
+      width: 38.9
+    notes: "中间腔体的凹槽（内部壁分隔产生），从chamber_2中去除的部分"
+
+  - name: "fillet_outer"
+    function: "transition"
+    type: "fillet"
+    bbox:
+      radius: 3.0
+      position: "outer_corner"
+    notes: "外角倒角过渡（共2个角）"
+
+  - name: "fillet_inner"
+    function: "transition"
+    type: "fillet"
+    bbox:
+      radius: 2.5
+      position: "inner_corner"
+    notes: "内角倒角过渡（共4个角：筋两端各2个）"
+
+feature_statistics:
+  outer_fillet_count: 2
+  inner_fillet_count: 4
+  notch_count: 1
+  stiffener_count: 2
+  chamber_count: 3
+  flange_count: 2
+  open_side_count: 0
+
+applications:
+  - part: "front_bumper_beam"
+    location: "front_end"
+    vehicle: "B31"
+    example: "B31 前防撞梁"
+    notes: "目字形截面用于前防撞梁，提供多格吸能结构"
+
+reverse_knowledge:
+  - location: "front_end"
+    part: "front_bumper_beam"
+    common_shapes: ["目_shape"]
+    confidence: "high"
+    notes: "前防撞梁常用目字形截面（两条筋），提供多格吸能"
+
+processes:
+  - extrusion
+
+materials:
+  - aluminum
+
+metadata:
+  version: "2.1"
+  date: "2026-07-27"
+  source: "DFC Macro"
+  status: "draft"
+  annotation_strategy: "bbox_only"
+  notes: "目字形截面实例。标注策略：纯Bounding Box，不锚定点/线ID，不使用方向词。坐标从DFC脚本实际几何数据计算。"

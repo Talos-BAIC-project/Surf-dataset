@@ -1,0 +1,146 @@
+schema_version: '1.0'
+id: m-shape-1
+type: cross_section
+
+shape:
+  primary: m_shape
+  aliases:
+    - M字形
+  topology: open
+  features:
+    - 开放型截面，M字形轮廓
+    - 中间有V形凸起（notch），形成两个cavity
+    - 角部有倒角过渡
+    - 开放端有flange连接车身
+  confidence: 0.9
+  source: user_confirmed
+  notes: M字形截面，钢制辊压。来自BAOJUN730，前防撞梁。
+
+geometry:
+  n_points: 18
+  n_curves: 17
+  n_outer_fillets: 8
+  bounding_box:
+    width: 48.5
+    height: 130.0
+
+regions:
+  - name: "wall_a"
+    function: "structural"
+    bbox:
+      x: 3.0
+      y: 115.8
+      width: 42.5
+      height: 3.0
+    notes: "水平壁A"
+
+  - name: "wall_b"
+    function: "structural"
+    bbox:
+      x: 3.0
+      y: 14.2
+      width: 42.5
+      height: 3.0
+    notes: "水平壁B"
+
+  - name: "wall_c"
+    function: "structural"
+    bbox:
+      x: 45.5
+      y: 76.4
+      width: 3.0
+      height: 36.4
+    notes: "垂直壁A，notch与壁A之间"
+
+  - name: "wall_d"
+    function: "structural"
+    bbox:
+      x: 45.5
+      y: 17.2
+      width: 3.0
+      height: 36.4
+    notes: "垂直壁B，notch与壁B之间"
+
+  - name: "cavity_1"
+    function: "cavity"
+    bbox:
+      x: 0.0
+      y: 74.0
+      width: 48.5
+      height: 41.8
+    notes: "开合空腔1，从开放端到wall_c外表面，notch与壁A之间"
+
+  - name: "cavity_2"
+    function: "cavity"
+    bbox:
+      x: 0.0
+      y: 14.2
+      width: 48.5
+      height: 41.8
+    notes: "开合空腔2，从开放端到wall_d，notch与壁B之间"
+
+  - name: "notch"
+    function: "forming_feature"
+    bbox:
+      x: 28.5
+      y: 56.0
+      depth: 20.0
+      width: 18.0
+    notes: "中间V形凸起特征，从wall_c外表面到notch深度壁面"
+
+  - name: "flange_a"
+    function: "connection"
+    bbox:
+      x: 0.0
+      y: 118.8
+      width: 3.0
+      height: 11.2
+    notes: "法兰A，开放端垂直壁"
+
+  - name: "flange_b"
+    function: "connection"
+    bbox:
+      x: 0.0
+      y: 0.0
+      width: 3.0
+      height: 11.2
+    notes: "法兰B，开放端垂直壁"
+
+feature_statistics:
+  outer_fillet_count: 8
+  notch_count: 1
+  cavity_count: 2
+  flange_count: 2
+  open_side_count: 1
+
+applications:
+  - part: front_bumper_beam
+    location: front_end
+    vehicle: BAOJUN730
+    example: BAOJUN730 前防撞梁
+    notes: M字形截面用于前防撞梁，钢制辊压
+
+processes:
+  - roll_forming
+
+materials:
+  - steel
+
+metadata:
+  version: '2.1'
+  date: '2026-07-29'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: M字形截面实例。2个cavity+1个notch+2个flange。来自BAOJUN730。
+
+variants:
+  - vehicle: "BAIC B31"
+    bounding_box: {width: 211.2, height: 35.0}
+    source_file: "test-section-6.xml"
+    notes: "BAIC B31排座椅横梁，钢制冲压"
+  - vehicle: "BAIC N82KS"
+    bounding_box: {width: 216.556, height: 40.200}
+    source_file: "test-section-7.xml"
+    wall_thickness: 1.0
+    notes: "BAIC N82KS前座椅横梁，钢制辊压"

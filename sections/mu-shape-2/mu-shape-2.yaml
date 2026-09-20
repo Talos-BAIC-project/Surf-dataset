@@ -1,0 +1,156 @@
+schema_version: "1.0"
+id: mu-shape-2
+type: cross_section
+
+shape:
+  primary: "目_shape"
+  aliases: ["目字形", "两条筋"]
+  topology: "closed"
+  n_chambers: 3
+  features:
+    - "闭合截面，矩形外轮廓，内部两条水平筋分隔成三格"
+    - "外轮廓角部有倒角过渡（半径因车型而异）"
+    - "无法兰，无凹槽"
+  confidence: 0.9
+  source: "user_confirmed"
+  notes: "目字形截面，铝制挤压。简单目字形（12点14曲线，2直筋3腔体4倒角，无flange无notch）。"
+
+# 多车型变体（形状相同，尺寸不同）
+variants:
+  - vehicle: "AION"
+    bounding_box: {width: 42.0, height: 137.0}
+    fillet_radius: 2.5
+    wall_thickness: 2.5
+    source_file: "mu-shape-2.xml"
+    notes: "推测紧凑型SUV，非官方数模"
+  - vehicle: "N80KS"
+    bounding_box: {width: 43.0, height: 147.0}
+    fillet_radius: 3.0
+    wall_thickness: 3.0
+    source_file: "mu-shape-3.xml"
+    notes: "BAIC轿车"
+  - vehicle: "BAIC C71"
+    bounding_box: {width: 82.3, height: 167.2}
+    source_file: "test-section-2.xml"
+    notes: "BAIC C71纵梁，铝制挤压（XML Properties标错材料为Fe，实际为Al）"
+
+# 以下为基准实例（AION）的几何标注
+geometry:
+  n_points: 12
+  n_curves: 14
+  n_outer_fillets: 4
+  n_inner_fillets: 0
+  n_notches: 0
+  n_stiffeners: 2
+  bounding_box:
+    width: 42.0
+    height: 137.0
+
+# 坐标系：以截面自身的 bounding box 左下角为原点
+# x: 宽度方向，y: 高度方向
+# 坐标值从 DFC XML sCoord 计算得出
+regions:
+  - name: "main_wall_a"
+    function: "structural"
+    bbox:
+      x: 0.0
+      y: 0.0
+      width: 2.5
+      height: 137.0
+    notes: "主壁A，沿截面整个高度连续"
+
+  - name: "main_wall_b"
+    function: "structural"
+    bbox:
+      x: 39.5
+      y: 0.0
+      width: 2.5
+      height: 137.0
+    notes: "主壁B，沿截面整个高度连续"
+
+  - name: "stiffener_a"
+    function: "stiffener"
+    bbox:
+      x: 0.0
+      y: 91.5
+      width: 42.0
+      height: 1.0
+    notes: "加强筋A，水平方向，连接主壁A与主壁B"
+
+  - name: "stiffener_b"
+    function: "stiffener"
+    bbox:
+      x: 0.0
+      y: 45.5
+      width: 42.0
+      height: 1.0
+    notes: "加强筋B，水平方向，连接主壁A与主壁B"
+
+  - name: "chamber_1"
+    function: "enclosed"
+    bbox:
+      x: 2.5
+      y: 91.5
+      width: 37.0
+      height: 43.0
+    notes: "腔体1，筋A与外轮廓之间"
+
+  - name: "chamber_2"
+    function: "enclosed"
+    bbox:
+      x: 2.5
+      y: 45.5
+      width: 37.0
+      height: 46.0
+    notes: "腔体2，筋A与筋B之间"
+
+  - name: "chamber_3"
+    function: "enclosed"
+    bbox:
+      x: 2.5
+      y: 2.5
+      width: 37.0
+      height: 43.0
+    notes: "腔体3，筋B与外轮廓之间"
+
+feature_statistics:
+  outer_fillet_count: 4
+  inner_fillet_count: 0
+  notch_count: 0
+  stiffener_count: 2
+  chamber_count: 3
+  flange_count: 0
+  open_side_count: 0
+
+applications:
+  - part: "front_bumper_beam"
+    location: "front_end"
+    vehicle: "AION"
+    example: "AION 紧凑型SUV 前防撞梁"
+    notes: "目字形截面用于前防撞梁，铝制挤压，非官方数模"
+  - part: "front_bumper_beam"
+    location: "front_end"
+    vehicle: "N80KS"
+    example: "N80KS 前防撞梁"
+    notes: "目字形截面用于前防撞梁，铝制挤压，BAIC轿车"
+
+reverse_knowledge:
+  - location: "front_end"
+    part: "front_bumper_beam"
+    common_shapes: ["目_shape"]
+    confidence: "high"
+    notes: "前防撞梁常用目字形截面（两条筋），铝制挤压"
+
+processes:
+  - extrusion
+
+materials:
+  - aluminum
+
+metadata:
+  version: "2.0"
+  date: "2026-07-28"
+  source: "DFC XML"
+  status: "draft"
+  annotation_strategy: "bbox_only"
+  notes: "目字形截面实例。合并AION(mu-shape-2)和N80KS(mu-shape-3)，形状相同尺寸不同。基准实例为AION。标注策略：纯Bounding Box，不锚定点/线ID，不使用方向词。"

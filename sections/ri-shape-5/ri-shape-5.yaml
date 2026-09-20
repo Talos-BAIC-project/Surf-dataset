@@ -1,0 +1,72 @@
+schema_version: '1.0'
+id: ri-shape-5
+type: cross_section
+shape:
+  primary: ri_shape
+  aliases:
+  - 日字形
+  topology: closed
+geometry:
+  n_points: 11
+  n_curves: 12
+  n_outer_fillets: 0
+  bounding_box:
+    width: 37.3
+    height: 114.8
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 65.8
+    width: 37.3
+    height: 49.0
+  notes: 腔体A
+- name: chamber_2
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 17.2
+    width: 37.3
+    height: 48.6
+  notes: 腔体B
+- name: stiffener_1
+  function: stiffener
+  bbox:
+    x: 0.0
+    y: 62.8
+    width: 37.3
+    height: 6.0
+  notes: 筋板
+- name: flange_1
+  function: connection
+  bbox:
+    x: 35.3
+    y: 0.0
+    width: 2.0
+    height: 17.2
+  notes: 延伸壁
+feature_statistics:
+  chamber_count: 2
+  stiffener_count: 1
+  notch_count: 0
+  flange_count: 1
+  open_side_count: 1
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: BAIC C62X
+  example: BAIC C62X 前防撞梁
+  notes: 铝制挤压截面
+processes:
+- extrusion
+materials:
+- aluminum
+metadata:
+  version: '1.0'
+  date: '2026-07-30'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 铝制挤压截面，BAIC C62X前防撞梁

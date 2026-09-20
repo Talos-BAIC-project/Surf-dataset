@@ -1,0 +1,64 @@
+schema_version: '1.0'
+id: ri-shape-6
+type: cross_section
+shape:
+  primary: ri_shape
+  aliases:
+  - 日字形
+  topology: open
+geometry:
+  n_points: 18
+  n_curves: 17
+  n_outer_fillets: 0
+  bounding_box:
+    width: 43.5
+    height: 103.5
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 51.0
+    width: 43.5
+    height: 52.5
+  notes: 腔体A
+- name: chamber_2
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 1.5
+    width: 43.5
+    height: 46.5
+  notes: 腔体B
+- name: stiffener_1
+  function: stiffener
+  bbox:
+    x: 0.0
+    y: 48.0
+    width: 43.5
+    height: 3.0
+  notes: 筋板
+feature_statistics:
+  chamber_count: 2
+  stiffener_count: 1
+  notch_count: 0
+  flange_count: 0
+  open_side_count: 1
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: unknown
+  example: 某车型前防撞梁
+  notes: 钢制辊压截面
+processes:
+- roll_forming
+materials:
+- steel
+metadata:
+  version: '1.0'
+  date: '2026-07-30'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 钢制辊压截面，可能应用于某车前防撞梁

@@ -1,0 +1,96 @@
+schema_version: '1.0'
+id: ri-shape-3
+type: cross_section
+shape:
+  primary: ri_shape
+  aliases:
+  - 日字形
+  topology: open
+geometry:
+  n_points: 44
+  n_curves: 43
+  n_outer_fillets: 0
+  bounding_box:
+    width: 38.7
+    height: 133.7
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 70.5
+    width: 38.7
+    height: 63.2
+  notes: 封闭型内腔A
+- name: chamber_2
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 0.0
+    width: 38.7
+    height: 64.5
+  notes: 封闭型内腔B
+- name: stiffener_1
+  function: stiffener
+  bbox:
+    x: 0.0
+    y: 64.5
+    width: 38.7
+    height: 6.0
+  notes: 内部筋板
+- name: notch_1
+  function: forming_feature
+  bbox:
+    x: 35.7
+    y: 25.81
+    depth: 3.0
+    width: 16.38
+  notes: 成型内凹特征A
+- name: notch_2
+  function: forming_feature
+  bbox:
+    x: 35.7
+    y: 91.51
+    depth: 3.0
+    width: 16.38
+  notes: 成型内凹特征B
+- name: notch_3
+  function: forming_feature
+  bbox:
+    x: 0.0
+    y: 87.5
+    depth: 9.62
+    width: 24.4
+  notes: 成型内凹特征C
+- name: notch_4
+  function: forming_feature
+  bbox:
+    x: 0.0
+    y: 21.8
+    depth: 9.63
+    width: 24.4
+  notes: 成型内凹特征D
+feature_statistics:
+  chamber_count: 2
+  stiffener_count: 1
+  notch_count: 4
+  flange_count: 0
+  open_side_count: 0
+  outer_fillet_count: 0
+applications:
+- part: front_bumper_beam
+  location: front_end
+  vehicle: N82KS
+  example: N82KS 前防撞梁
+  notes: 日字形截面，钢制辊压，来自N82KS。
+processes:
+- roll_forming
+materials:
+- steel
+metadata:
+  version: '1.0'
+  date: '2026-07-29'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 日字形截面，钢制辊压，来自N82KS。

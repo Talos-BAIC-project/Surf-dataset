@@ -1,0 +1,74 @@
+schema_version: '1.0'
+id: ri-shape-1
+type: cross_section
+shape:
+  primary: ri_shape
+  aliases:
+  - 日字形
+  topology: closed
+geometry:
+  n_points: 10
+  n_curves: 11
+  n_outer_fillets: 0
+  bounding_box:
+    width: 41.7
+    height: 107.7
+variants:
+- vehicle: Hongqi
+  bounding_box: {width: 42.0, height: 107.0}
+  source_file: ri-shape-2.xml
+  notes: 红旗轿车，同形状不同尺寸
+regions:
+- name: chamber_1
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 56.8
+    width: 41.7
+    height: 50.9
+  notes: 封闭型内腔A
+- name: chamber_2
+  function: enclosed
+  bbox:
+    x: 0.0
+    y: 0.0
+    width: 41.7
+    height: 50.8
+  notes: 封闭型内腔B
+- name: stiffener_1
+  function: stiffener
+  bbox:
+    x: 0.0
+    y: 50.8
+    width: 41.7
+    height: 6.0
+  notes: 内部筋板
+feature_statistics:
+  chamber_count: 2
+  stiffener_count: 1
+  notch_count: 0
+  flange_count: 0
+  open_side_count: 0
+  outer_fillet_count: 0
+applications:
+- part: front_bumper
+  location: front_end
+  vehicle: BAIC changheH40D
+  example: BAIC changheH40D 前保险杠
+  notes: 日字形截面，铝制挤压，来自BAIC changheH40D。
+- part: front_bumper_beam
+  location: front_end
+  vehicle: Hongqi
+  example: Hongqi 前防撞梁
+  notes: 日字形截面，铝制挤压，来自红旗轿车。
+processes:
+- extrusion
+materials:
+- aluminum
+metadata:
+  version: '2.0'
+  date: '2026-07-29'
+  source: DFC XML
+  status: draft
+  annotation_strategy: bbox_only
+  notes: 日字形截面，铝制挤压。合并ri-shape-2(Hongqi)为变体。

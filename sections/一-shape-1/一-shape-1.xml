@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AutoConcept>
+  <CoordSystem>
+    <ID>S_21_CS</ID>
+    <Name>S_21</Name>
+    <origin>
+      <X>-731.11521895555</X>
+      <Y>-549.745284614911</Y>
+      <Z>233.97</Z>
+    </origin>
+  </CoordSystem>
+  <Section>
+    <ID>sec_1</ID>
+    <Name>S_21</Name>
+    <Type>1</Type>
+    <CoordSysID>S_21_CS</CoordSysID>
+  </Section>
+  <Point>
+    <Name>S_21_SP_1</Name>
+    <Type>2</Type>
+    <sectionName>S_21</sectionName>
+    <sCoord>
+      <item>0</item>
+      <item>10.8</item>
+      <item>4.29</item>
+    </sCoord>
+  </Point>
+  <Point>
+    <Name>S_21_SP_2</Name>
+    <Type>2</Type>
+    <sectionName>S_21</sectionName>
+    <sCoord>
+      <item>0</item>
+      <item>81.22</item>
+      <item>4.29</item>
+    </sCoord>
+  </Point>
+  <Curve>
+    <Name>S_21_SL_1</Name>
+    <startPointName>S_21_SP_1</startPointName>
+    <endPointName>S_21_SP_2</endPointName>
+    <Type>2</Type>
+    <sectionName>S_21</sectionName>
+  </Curve>
+</AutoConcept>
