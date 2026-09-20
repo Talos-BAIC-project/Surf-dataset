@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "label_quality": "propagated_silver_not_engineer_gold",
+  "review_status": "pending",
+  "dataset_repository": "Talos-BAIC-project/dfc-dataset",
+  "dataset_commit": "e45fe322a896ff5acd36f38bc19000536b2d5d0c",
+  "corpus_sections": 27,
+  "source_files": [
+    {
+      "path": "sections/b-shape-1/b-shape-1.yaml",
+      "sha256": "634709cfe01c387cde2e298a5e47a33af4af4b98a33aa71c9625415cd637a407"
+    },
+    {
+      "path": "sections/b-shape-1/b-shape-1.py",
+      "sha256": "1384402a34889f1a27b067b8969560fdd5e1bfb217e70d38d6ee80cec449ae24"
+    },
+    {
+      "path": "sections/B-shape-2/B-shape-2.yaml",
+      "sha256": "1f7b7fa3cea0e41cdca16d64ec4128986654f99e05f95f8f0075ba551e83be85"
+    },
+    {
+      "path": "sections/B-shape-2/B-shape-2.py",
+      "sha256": "ae88caa7a378ec1042d383e219d466c29f569138ff5481822817cc7e805d3717"
+    },
+    {
+      "path": "sections/B-shape-3/B-shape-3.yaml",
+      "sha256": "2cab276aa704a7c42625f7018e1ef257c6cf9a91cbfcc4ab265c4b4c17f65815"
+    },
+    {
+      "path": "sections/B-shape-3/B-shape-3.py",
+      "sha256": "a10609d490da09843a60e723d5792da9c8b9a8fdd5d0ed58b0a0e3c48f4fca03"
+    },
+    {
+      "path": "sections/B-shape-6/B-shape-6.yaml",
+      "sha256": "95e69ca524e0145d68f5cb11cf74b5a2319f7123876ab79da448edc490b43819"
+    },
+    {
+      "path": "sections/B-shape-6/B-shape-6.xml",
+      "sha256": "228c289152904952af259404035a7a5fc79a87c5d7a5b74369d83a86dab181a2"
+    },
+    {
+      "path": "sections/ji-shape-1/ji-shape-1.yaml",
+      "sha256": "bf0e1b98ff4335706254ef81fd6243384df7f7aa555efe780b328d3298a7a2b0"
+    },
+    {
+      "path": "sections/ji-shape-1/ji-shape-1.py",
+      "sha256": "2c164049455ec89d18b0f12977047b02d824162fb2a6ec7ca820114c633b4bdd"
+    },
+    {
+      "path": "sections/ji-shape-2/ji-shape-2.yaml",
+      "sha256": "c19854bd18fc4587f13e678d017deedd22db60f783d63a34a54eb7f3fb4f7547"
+    },
+    {
+      "path": "sections/ji-shape-2/ji-shape-2.py",
+      "sha256": "bb319ddbe2c9a59160f0a9811f495ec884a045aeca6eecc251d811e95c26b6a1"
+    },
+    {
+      "path": "sections/ji-shape-3/ji-shape-3.yaml",
+      "sha256": "8d5b3214ef0bfa1bc55f2fce48d04d6311d251953b8e701fda2eb9b8bfad518d"
+    },
+    {
+      "path": "sections/ji-shape-3/ji-shape-3.py",
+      "sha256": "638bbb1d2d8c845357f50bdb5aaf30567b6f4034f5b6a6afee1e401a87b6dcbd"
+    },
+    {
+      "path": "sections/kou-shape-1/kou-shape-1.yaml",
+      "sha256": "4141afd01a4f56af22276e60d9802ec611bb231a61f6cabe0e24dba9ebb8b7f0"
+    },
+    {
+      "path": "sections/kou-shape-1/kou-shape-1.py",
+      "sha256": "b63df0ff0fd5e1af0870dc51d7de4ca01d0f384fd087c19e842d4b30adc0a812"
+    },
+    {
+      "path": "sections/kou-shape-2/kou-shape-2.yaml",
+      "sha256": "f04f3af172b344b135df5c15a8dca5553c51e231623a1260fe853a38c3cd7b70"
+    },
+    {
+      "path": "sections/kou-shape-2/kou-shape-2.py",
+      "sha256": "b9c247701bcbdcac3cdf6b5e62c26780fb0ae424858a9171697da3810aee1be3"
+    },
+    {
+      "path": "sections/kou-shape-3/kou-shape-3.yaml",
+      "sha256": "dea93a2d75619f3e0d13dc26a4c679b9116af8f22e0834dce90ac1f249f33b21"
+    },
+    {
+      "path": "sections/kou-shape-3/kou-shape-3.py",
+      "sha256": "a5ca797ebd7c69a06de5fab389dac5ab9afc7f4adc4f32d6bd7fc2105fafd54b"
+    },
+    {
+      "path": "sections/kou-shape-4/kou-shape-4.yaml",
+      "sha256": "b860be161c9db8a54c8393be04b0f954306b8139b31a1380dcf142212890b120"
+    },
+    {
+      "path": "sections/kou-shape-4/kou-shape-4.xml",
+      "sha256": "d66e921f682f42ed943271961fb4db589d0eefbbce5e63005cceaab367102889"
+    },
+    {
+      "path": "sections/m-shape-1/m-shape-1.yaml",
+      "sha256": "712bc4e20dda0027f407ff32a391669d83703977fb03512520de66ac6b2aedd4"
+    },
+    {
+      "path": "sections/m-shape-1/m-shape-1.py",
+      "sha256": "6707cc3f3178d30327136fc0ecb41e6ab3358562e8b9d9a40792aa5c3244f47f"
+    },
+    {
+      "path": "sections/m-shape-2/m-shape-2.yaml",
+      "sha256": "68c6aabf840da69b150b7c9bfacc9e8f7e65fe6a4da1aee4704620785a2f0286"
+    },
+    {
+      "path": "sections/m-shape-2/m-shape-2.py",
+      "sha256": "ee69a39de9e40256382b70f85b2f93d2fdf2884953db4dcc8fe81c4050b48d9a"
+    },
+    {
+      "path": "sections/m-shape-3/m-shape-3.yaml",
+      "sha256": "196c588c66125d9814de44d1c26cf41bd8eda487568214d144699363bc00c3e3"
+    },
+    {
+      "path": "sections/m-shape-3/m-shape-3.py",
+      "sha256": "4670bf47de1912da4d4d087a507ecf58bc5268477bad22224784a908111a547c"
+    },
+    {
+      "path": "sections/mu-shape-1/mu-shape-1.yaml",
+      "sha256": "e4d61dd4d8d88117efe91e7c401db0381e7abe32a1803297c2fc01a0dec9d9ed"
+    },
+    {
+      "path": "sections/mu-shape-1/mu-shape-1.py",
+      "sha256": "1667965c5b5e2117e613e8ca404afc03af3e8542c3c4bbcd1c4abbbf8edb102d"
+    },
+    {
+      "path": "sections/mu-shape-2/mu-shape-2.yaml",
+      "sha256": "3e3f1d14e7c361fa2c2d86c9fa1f8c558553635cfbe87b9f7f69d6982f71cac8"
+    },
+    {
+      "path": "sections/mu-shape-2/mu-shape-2.py",
+      "sha256": "8d7f759ef1a2b35d8d11737821d6b53b23bef292f184bf284a757196f74d0c87"
+    },
+    {
+      "path": "sections/mu-shape-4/mu-shape-4.yaml",
+      "sha256": "321a43e1dbe08f2a4c77e4d9e0230fb91e8e421215add925855ee0202493b6eb"
+    },
+    {
+      "path": "sections/mu-shape-4/mu-shape-4.py",
+      "sha256": "b5300f54994dd799adc02d1fcd767c67f31906cd13bb3235a38839b55f4c4312"
+    },
+    {
+      "path": "sections/mu-shape-5/mu-shape-5.yaml",
+      "sha256": "4123f63122f466f77061d8a86152da6dc94069fa23b4666b1c4f19a88c24b593"
+    },
+    {
+      "path": "sections/mu-shape-5/mu-shape-5.py",
+      "sha256": "9901bf42aef46290978246c10961b77b7151fc51629a2502a7eafc10eabcf5bb"
+    },
+    {
+      "path": "sections/ri-shape-1/ri-shape-1.yaml",
+      "sha256": "ccab1ee86da889da1bae89b4919c311a9f0c6594f2ccdb4f0f2fde7ef4344e3a"
+    },
+    {
+      "path": "sections/ri-shape-1/ri-shape-1.py",
+      "sha256": "959f46c3f70553997939b835373409055cdd66cd667aa57503b1c5004237aee2"
+    },
+    {
+      "path": "sections/ri-shape-3/ri-shape-3.yaml",
+      "sha256": "41f53fe6ee9bd6d67b2fdc0451c18161f1119c052477be0eeab0ee59ee42d5b0"
+    },
+    {
+      "path": "sections/ri-shape-3/ri-shape-3.py",
+      "sha256": "00a465a1af0f839b78496bf0eb2b03191fa5eb07600adb8443086792dc447845"
+    },
+    {
+      "path": "sections/ri-shape-4/ri-shape-4.yaml",
+      "sha256": "b00127eb17dcb36ca1a3978140dc454f5dbc15178601b631c62bfe5550f9f22c"
+    },
+    {
+      "path": "sections/ri-shape-4/ri-shape-4.xml",
+      "sha256": "d3cfa3383d016e2fb29e0c0001964bb19462f5916480d5440104926cce61204c"
+    },
+    {
+      "path": "sections/ri-shape-5/ri-shape-5.yaml",
+      "sha256": "9d69ba87b0ab8ee943138e6c5252990d71e665e89ff24beae15d6084d8fb1a70"
+    },
+    {
+      "path": "sections/ri-shape-5/ri-shape-5.xml",
+      "sha256": "b4e8a38716e6cbf7f3761905d360caac6a96902347945cdbbd2c05e865251838"
+    },
+    {
+      "path": "sections/ri-shape-6/ri-shape-6.yaml",
+      "sha256": "34517adcfad1fa939ad2d837058825c07cd3276a5c70a47fe4747e7409cf2a7a"
+    },
+    {
+      "path": "sections/ri-shape-6/ri-shape-6.xml",
+      "sha256": "7898f2a03b2de700803f428fe34c471c3bd637dfd2447883799650d316120236"
+    },
+    {
+      "path": "sections/U-shape-1/U-shape-1.yaml",
+      "sha256": "51a4021ee85114e935fbf9d2a6a596260b73182625c41700433f3d357330dc21"
+    },
+    {
+      "path": "sections/U-shape-1/U-shape-1.xml",
+      "sha256": "aa03f75a2bc1ad290d755388cf5cb18c7e495ad8d44b248b4d405ade50529117"
+    },
+    {
+      "path": "sections/一-shape-1/一-shape-1.yaml",
+      "sha256": "80917286c6d0dd8bce5194e0da80a954e0722bd1ed73911a47c3181c210c3ab9"
+    },
+    {
+      "path": "sections/一-shape-1/一-shape-1.py",
+      "sha256": "13e3fb25f42bee7a07c26d4c9ce08ace89c41c56286df0bd70c1ec854ede7821"
+    },
+    {
+      "path": "sections/一-shape-2/一-shape-2.yaml",
+      "sha256": "46b3f18062db0bad44231f9281394d7c9ab7f37ab23bafdd99f1b0b5f3e425b3"
+    },
+    {
+      "path": "sections/一-shape-2/一-shape-2.py",
+      "sha256": "1319fee8e6d2557d57b85cfef6c3bc0f553b2fcf72531c567ae4a9d83d541814"
+    },
+    {
+      "path": "sections/一-shape-3/一-shape-3.yaml",
+      "sha256": "946c436279e6f7f7f78c965f41cffe5b9f9955248827c77613bcd91ffc1a0e0d"
+    },
+    {
+      "path": "sections/一-shape-3/一-shape-3.py",
+      "sha256": "e8e8932d16fdd4fa50c8a7d4cd6656278b9e8a6b81e686644d1d3f96fa87a106"
+    }
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.4.4",
+    "PyYAML": "6.0.3"
+  },
+  "datasets": [
+    {
+      "name": "pilot",
+      "path": "data/aug/pilot/aug_sections.jsonl",
+      "sha256": "31d67eaa03efec3ae155b3bd6ae91a65d18221198dc316c297872f1f5097b0e2",
+      "records": 100,
+      "source_count": 5,
+      "operations": {
+        "move": 23,
+        "rib": 7,
+        "rigid": 36,
+        "scale": 38,
+        "split": 66
+      },
+      "seed": 1,
+      "per_section": 20,
+      "quota": 0,
+      "pilot": true,
+      "report_path": "data/aug/pilot/aug_report.md",
+      "report_sha256": "f6311c1785de7a0e2b54a445ddd6f2c16ffc98bac0927f7e755c901753c85d54"
+    },
+    {
+      "name": "full",
+      "path": "data/aug/aug_sections.jsonl",
+      "sha256": "9db74bda999b305eaadbedc595cfa5c0a992e98ab44c182f99c8b28df26ad0a9",
+      "records": 480,
+      "source_count": 24,
+      "operations": {
+        "move": 120,
+        "rib": 38,
+        "rigid": 146,
+        "scale": 200,
+        "split": 282
+      },
+      "seed": 1,
+      "per_section": 20,
+      "quota": 200,
+      "pilot": false,
+      "report_path": "data/aug/aug_report.md",
+      "report_sha256": "4a9b96c535a8f23cf2d80e218d0d825545517369948eda1992046775930b99f4"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+# Label 注册表：对齐 dfc-language-harness 的 dfc.substructure.* 命名。
+# functions: 对应 dfc-dataset regions[].function 的取值
+# entity_type: 该 Label 的主实体类型（face=闭合腔体 cell；curve=曲线集合）
+# 数据集侧 regions[].function == stiffener 与 internal_web 语境等价（MIG-0001）。
+labels:
+  - label_id: dfc.substructure.chamber
+    caption_zh: 腔体
+    caption_en: Chamber
+    entity_type: face
+    functions: [enclosed]
+    name_patterns: [chamber]
+    aliases: [腔体, 腔, 内腔, 空腔, 封闭腔, 腔室, 封闭空腔, chamber]
+
+  - label_id: dfc.substructure.cavity
+    caption_zh: 开放腔
+    caption_en: Open cavity
+    entity_type: curve
+    functions: [cavity]
+    name_patterns: [cavity]
+    aliases: [开放腔, 开口腔, 开放空腔, 槽腔, 开腔, cavity]
+
+  - label_id: dfc.substructure.internal_web
+    caption_zh: 内部腹板（筋）
+    caption_en: Internal web
+    entity_type: curve
+    functions: [stiffener]
+    name_patterns: [stiffener, rib]
+    aliases: [筋, 加强筋, 内筋, 筋板, 腹板, 内部腹板, 隔板, 内隔板, 梁, 内部筋板, stiffener, web, rib]
+
+  - label_id: dfc.substructure.web
+    caption_zh: 主壁/结构壁
+    caption_en: Structural wall
+    entity_type: curve
+    functions: [structural, structural_shape]
+    name_patterns: [wall, main_wall, crown, middle_rib]
+    aliases: [主壁, 壁, 侧壁, 壁板, 外壁, 立壁, 结构壁, 皇冠壁, wall, main wall, crown]
+
+  - label_id: dfc.substructure.flange
+    caption_zh: 翻边/法兰
+    caption_en: Flange
+    entity_type: curve
+    functions: [connection]
+    name_patterns: [flange]
+    aliases: [法兰, 翻边, 连接边, 法兰面, 法兰边, 搭接边, flange]
+
+  - label_id: dfc.substructure.notch
+    caption_zh: 凹槽/缺口
+    caption_en: Notch
+    entity_type: curve
+    functions: [forming_feature]
+    name_patterns: [notch]
+    aliases: [凹槽, 缺口, 内凹, 凹口, 成型槽, 凹形特征, notch]
+
+  - label_id: dfc.substructure.fillet
+    caption_zh: 倒角/圆角
+    caption_en: Fillet
+    entity_type: curve
+    functions: [transition]
+    name_patterns: [fillet, chamfer]
+    aliases: [倒角, 圆角, 过渡圆角, 倒圆, 过渡段, fillet, chamfer]
+
+  - label_id: dfc.substructure.outer_contour
+    caption_zh: 外轮廓
+    caption_en: Outer contour
+    entity_type: curve
+    functions: []            # 无数据集 region，几何派生金标
+    name_patterns: [outer_contour]
+    aliases: [外轮廓, 外框, 轮廓, 外形, 外圈, outer contour, outline]
+
+# 位置词（查询文本 -> 局部坐标先验；数据集标注不含方向词，但工程师查询会用）
+position_words:
+  center: [中间, 中部, 中央, 居中, 正中]
+  top: [上, 上部, 上面, 顶部, 顶端, 上方, 上侧]
+  bottom: [下, 下部, 下面, 底部, 底端, 下方, 下侧]
+  left: [左, 左侧, 左边, 左面]
+  right: [右, 右侧, 右边, 右面]
+
+# 序数词
+ordinal_words:
+  1: [第一, 第1, 首个, "1号", a端, A端]
+  2: [第二, 第2, "2号", b端, B端]
+  3: [第三, 第3, "3号", c端, C端]
+  4: [第四, 第4, "4号"]
