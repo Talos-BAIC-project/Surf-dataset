@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Label → Region · T1–T5 结构可视化</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <h1>Label → Region</h1>
+    <p class="muted" id="dataset-note"></p>
+    <div class="stats" id="dataset-stats"></div>
+    <h2>测试样本</h2>
+    <div id="sample-list"></div>
+  </aside>
+  <main>
+    <header class="toolbar">
+      <div class="prompt-row">
+        <input id="prompt-input" autocomplete="off" placeholder="输入已有测试 prompt，例如：帮我选中左侧的梁">
+        <button id="run-button">显示测试结果</button>
+      </div>
+      <div class="case-row">
+        <label>当前 case <select id="case-select"></select></label>
+        <label><input type="checkbox" id="gold-toggle" checked> Gold Region</label>
+        <label><input type="checkbox" id="pred-toggle" checked> Rules Region</label>
+        <label><input type="checkbox" id="edge-toggle" checked> 显示边名</label>
+        <label><input type="checkbox" id="point-toggle"> 显示点名</label>
+      </div>
+    </header>
+    <section class="status" id="status"></section>
+    <section class="canvas-wrap">
+      <svg id="canvas" role="img" aria-label="截面几何和 Region 对比"></svg>
+      <div id="tooltip" class="tooltip hidden"></div>
+    </section>
+    <section class="details">
+      <div class="panel" id="case-panel"></div>
+      <div class="panel" id="comparison-panel"></div>
+    </section>
+  </main>
+</div>
+<script src="viewer_data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
